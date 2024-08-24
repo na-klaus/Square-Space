@@ -1,0 +1,11 @@
+# *
+User-agent: *
+Allow: *
+
+# Host
+Host: https://www.square-space.in/
+Host: https://www.square-space.com
+
+# Sitemaps
+Sitemap: https://www.square-space.in//sitemap.xml
+Sitemap: https://www.square-space.in//sitemap-0.xml

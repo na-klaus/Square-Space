@@ -1,0 +1,24 @@
+{
+	"name": "Square Space",
+	"logo": "",
+	"splashscreen": true,
+
+	"autoupdatecheck": true,
+	"version": "1.0.6",
+
+	"username": {
+		"github": "na-klaus",
+		"medium": "@na-klaus",
+		"dev": "na-klaus"
+	},
+	"repository": {
+		"owner": "na-klaus",
+		"name": "Square-Space",
+		"repoName": "Square-Space"
+	},
+	"portfolio": {
+		"fork_this": "CLOSED SOURCE",
+		"repo_html": "https://github.com/na-klaus/Square-Space",
+		"repo_api": ""
+	}
+}

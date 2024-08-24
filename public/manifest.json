@@ -1,0 +1,29 @@
+{
+  "short_name": "Square Space",
+  "name": "Square Space",
+  "icons": [
+    {
+      "src": "favicon/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicon/favicon.jpg",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicon/favicon.jpg",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "description": "Square Space - Explore a wide range of architecture and engineering projects. Dive into our expertise in design, consulting, and innovative solutions.",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

@@ -1,0 +1,32 @@
+{
+    "intro": {
+        "start": "A Firm that provides",
+        "end": "Architecture , Liasoning , Noc , Interior",
+        "speed": 60,
+        "deletionSpeed": 80,
+        "wrapper": "h2",
+        "startDelay": 1000,
+        "deleteDelay": 3000,
+        "restartDelay": 12000
+    },
+
+    "header": {
+        "name": "Square Space.",
+        "usp": "Architecture And Liasoning Firm."
+    },
+
+    "paragraph": "Elevating Projects through Innovative Design and Strategic Planning",
+
+    "buttons": {
+        "primary": {
+            "title": "Contact us",
+            "url": "mailto:connect@square-space.in",
+            "leaveSite": true
+        },
+        "secondary": {
+            "title": "LinkedIn",
+            "url": "https://www.linkedin.com/company/square-space-1",
+            "leaveSite": true
+        }
+    }
+}

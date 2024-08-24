@@ -1,0 +1,27 @@
+[
+  {
+    "question": "Where are you currently located?",
+    "answer": "Square Space is located at 2nd Floor, LM Tower, 206/207, Kalyan - Bhiwandi Rd, Vishal Wadi, Bhadwad Naka, Sonale Village, Bhiwandi, Maharashtra 421302.",
+    "isOpen": false
+  },
+  {
+    "question": "What services does Square Space offer?",
+    "answer": "Square Space provides a range of services including architectural design, consulting engineering, legal consulting, structured planning, interior designing, and assistance with NOC and building permissions.",
+    "isOpen": false
+  },
+  {
+    "question": "What are your company’s core values?",
+    "answer": "Square Space is committed to delivering high-quality and innovative solutions in architectural and engineering services. We prioritize client satisfaction, integrity, and excellence in every project we undertake.",
+    "isOpen": false
+  },
+  {
+    "question": "Can we collaborate with Square Space on a project?",
+    "answer": "Yes, Square Space is open to collaboration on various projects. We are always interested in exploring new opportunities that align with our expertise and values.",
+    "isOpen": false
+  },
+  {
+    "question": "How does Square Space stay updated with industry developments?",
+    "answer": "Square Space stays updated by engaging with industry trends, participating in professional development events, and leveraging insights from our extensive network of partners and experts. We continuously innovate to provide cutting-edge solutions to our clients.",
+    "isOpen": false
+  }
+]

@@ -1,0 +1,64 @@
+{
+	"Websites": [
+		{
+			"person": "square-space.in",
+			"link": "https://www.square-space.in//",
+			"note": ""
+		},
+		{
+			"person": "square-space.in",
+			"link": "square-space.in/",
+			"note": ""
+		}
+
+	],
+
+	"links": [
+		{
+			"person": "Home",
+			"link": "https://www.square-space.in//",
+			"note": ""
+		},
+		{ 
+			"person": "Documentations",
+			"link": "https://www.square-space.in//docs",
+			"note": ""
+		},	{
+			"person": "Articles",
+			"link": "https://www.square-space.in//articles",
+			"note": ""
+		},
+
+		{
+			"person": "Projects",
+			"link": "https://www.square-space.in//projects",
+			"note": ""
+		},
+		{
+			"person": "Contact",
+			"link": "mailto:connect@square-space.in",
+			"note": ""
+		}
+
+
+	],
+
+	"social": [
+		{
+			"url": "https://medium.com/",
+			"icon": "medium"
+		},
+		{
+			"url": "https://dev.to/",
+			"icon": "dev"
+		},
+		{
+			"url": "https://www.linkedin.com/in//",
+			"icon": "linkedin"
+		},
+		{
+			"url": "https://github.com/",
+			"icon": "github"
+		}
+	]
+}

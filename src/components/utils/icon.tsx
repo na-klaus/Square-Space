@@ -16,27 +16,20 @@ interface IconProps {
 }
 
 const Icon: React.FC<IconProps> = ({ icon }) => {
-  // Check if the icon prop is valid
-  if (!Array.isArray(icon) || icon.length !== 2) {
-    console.error('Invalid icon prop:', icon);
-    return null;
-  }
+  // Default to a placeholder icon in case of invalid props
+  const defaultIcon: [IconPrefix, IconName] = ['fas', 'question-circle'];
 
-  const [iconType, iconKey] = icon;
-
-  // Ensure the iconType and iconKey are valid
-  if (!iconType || !iconKey) {
-    console.error('Icon prefix or name is missing:', icon);
-    return null;
-  }
+  const [iconType, iconKey] = Array.isArray(icon) && icon.length === 2
+    ? icon
+    : defaultIcon;
 
   const [stateIconKey, setIconKey] = useState<IconName>(iconKey);
 
   useEffect(() => {
-    setIconKey(iconKey as IconName);
+    setIconKey(iconKey);
   }, [iconKey]);
 
-  return <FontAwesomeIcon icon={[iconType as IconPrefix, stateIconKey]} />;
+  return <FontAwesomeIcon icon={[iconType, stateIconKey]} />;
 };
 
 export default Icon;

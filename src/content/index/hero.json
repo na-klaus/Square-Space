@@ -20,7 +20,7 @@
     "buttons": {
         "primary": {
             "title": "Contact us",
-            "url": "mailto:connect@square-space.in",
+            "url": "/signin",
             "leaveSite": true
         },
         "secondary": {

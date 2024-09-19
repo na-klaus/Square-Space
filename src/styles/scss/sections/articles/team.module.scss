@@ -1,0 +1,171 @@
+@import '../../mixins';
+
+.section {
+  background: var(--background);
+  padding: 5rem 2rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  width: 100%;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.teamMember {
+  background: var(--card-bg);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  max-width: 350px;
+  min-height: 450px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--primary-dark);
+  position: relative;
+  overflow: hidden;
+
+  // Add border lines on every side
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    border: 2px solid var(--border-line);
+    transition: border-color 0.3s ease;
+    z-index: 0;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 1.5rem;
+  }
+
+  &::after {
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 1.5rem;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  &:hover::before {
+    border-color: var(--border-line-hover);
+  }
+
+  .imageWrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+
+    .teamImage {
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      width: 100%;
+      height: 100%;
+      border-radius: 1rem;
+    }
+
+    &:hover .teamImage {
+      transform: scale(1.1);
+    }
+  }
+
+  .textWrapper {
+    z-index: 1;
+
+    .teamName {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: var(--primary-dark);
+      }
+    }
+
+    .teamPosition {
+      font-size: 1.1rem;
+      color: var(--text-dark);
+      margin-bottom: 0.75rem;
+    }
+
+    .teamDescription {
+      font-size: 1rem;
+      color: var(--text-dark);
+      max-width: 90%;
+      margin: 0 auto;
+      line-height: 1.5;
+      transition: max-height 0.3s ease-in-out;
+      overflow: hidden;
+
+      &:hover {
+        max-height: 150px;
+      }
+    }
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .teamGrid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .teamMember {
+    max-width: 300px;
+    min-height: 400px;
+    margin-bottom: 2rem;
+  }
+
+  .teamName {
+    font-size: 1.6rem;
+  }
+
+  .teamDescription {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .teamGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .teamMember {
+    max-width: 90%;
+    min-height: 350px;
+  }
+
+  .teamName {
+    font-size: 1.4rem;
+  }
+
+  .teamDescription {
+    font-size: 0.85rem;
+  }
+}

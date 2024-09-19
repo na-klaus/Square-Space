@@ -1,47 +1,32 @@
 [
-	{
-		"project": "Logly",
-		"url": "edit link",
-		"repo": "Public",
-		"descriptionTitle": "logly is a log management package",
-		"description": "that aims to provide various log management features such as auto logging and customize the log with color and tags and disable specific log levels ease and more",
-		"imageOptions": [
-		],
-		"images": [
-			{ "key": "mock-stack",	"hover": "right", 	"h": "300", "w": "300", "url": "/img/logly.png" }
-
-		],
-		"stack": [
-			{ "key": "python", "name": "Python", "type": "devicon" }
-
-		]
-
-	},
-	{
-		"project": "square-space.in",
-		"url": "edit link",
-		"repo": "Public",
-		"descriptionTitle": "edit ",
-		"description": "edit.",
-		"imageOptions": [
-			{ "key": "size", 		"value": "large" }
-		],
-		"images": [
-			{ "key": "portfolio", "hover": "left", "h": "550", "w": "330",  "url": "/img/img-mock.png" }
-		],
-		"stack": [
-			{ "key": "nextjs", 		"name": "Next.js", 		"type": "devicon" },
-			{ "key": "react", 		"name": "React", 		"type": "devicon" },
-			{ "key": "nodejs", 		"name": "Node.js", 		"type": "devicon" },
-			{ "key": "javascript", 	"name": "JavaScript", 	"type": "devicon" },
-			{ "key": "typescript", 	"name": "Typescript", 	"type": "devicon" },
-			{ "key": "html5",		"name": "HTML5", 		"type": "devicon" },
-			{ "key": "css3",		"name": "CSS3", 		"type": "devicon" },
-			{ "key": "sass",		"name": "SCSS", 		"type": "devicon" },
-			{ "key": "git",			"name": "Git(Hub)", 	"type": "devicon" },
-			{"key": "python", "name": "Python", "type": "devicon"},
-			{"key": "django", "name": "Django", "type": "devicon"}
-
-		]
-	}
+    {
+        "project": "Baug-e-Suraiyya",
+        "url": "Located in Bhiwandi",
+        "repo": "Public",
+        "descriptionTitle": "Residential Complex in Bhiwandi",
+        "description": "Baug-e-Suraiyya is a premium residential project located in Bhiwandi, offering modern amenities and thoughtfully designed living spaces to elevate urban living.",
+        "imageOptions": [],
+        "images": [
+            { "key": "baug-e-suraiyya", "hover": "right", "h": "1200", "w": "800", "url": "/img/baug-e-suraiyya.png" }
+        ],
+        "stack": [
+            { "key": "architecture", "name": "Architecture", "type": "industry" },
+            { "key": "sustainability", "name": "Sustainability", "type": "industry" }
+        ]
+    },
+    {
+        "project": "Millat Arcade",
+        "url": "Located in Kalyan",
+        "repo": "Public",
+        "descriptionTitle": "Commercial Complex in Kalyan",
+        "description": "Millat Arcade is a modern commercial project situated in Kalyan, designed to provide businesses with state-of-the-art facilities and an ideal environment for growth.",
+        "imageOptions": [],
+        "images": [
+            { "key": "millat-arcade", "hover": "left", "h": "1200", "w": "800", "url": "/img/millat-arcade.png" }
+        ],
+        "stack": [
+            { "key": "construction", "name": "Construction", "type": "industry" },
+            { "key": "innovation", "name": "Innovation", "type": "industry" }
+        ]
+    }
 ]

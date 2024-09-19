@@ -7,18 +7,18 @@
 	"version": "1.0.6",
 
 	"username": {
-		"github": "na-klaus",
+		"github": "Square-Space-Architects",
 		"medium": "@na-klaus",
 		"dev": "na-klaus"
 	},
 	"repository": {
-		"owner": "na-klaus",
+		"owner": "Square-Space-Architects",
 		"name": "Square-Space",
 		"repoName": "Square-Space"
 	},
 	"portfolio": {
-		"fork_this": "CLOSED SOURCE",
-		"repo_html": "https://github.com/na-klaus/Square-Space",
+		"fork_this": "FOLLOW US ON GITHUB",
+		"repo_html": "https://github.com/Square-Space-Architects",
 		"repo_api": ""
 	}
 }

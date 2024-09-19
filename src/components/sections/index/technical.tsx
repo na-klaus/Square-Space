@@ -1,4 +1,3 @@
-
 // Core packages
 import Image from 'next/image'
 
@@ -22,23 +21,23 @@ export default function Technical() {
 		<Section classProp={`${technical.section} borderBottom`}>
 			<Container spacing={['verticalXXXLrg']}>
 				<SectionTitle
-					title="Technical"
-					preTitle="Hard Skills"
-					subTitle="As a creative technologist, I craft intuitive digital experiences using a diverse set of tools and languages."
+					title="Technical Expertise"
+					preTitle="Square Space"
+					subTitle="We deliver cutting-edge architectural and consulting solutions using the best tools in the industry."
 				/>
 				<section className={`${technical.content} ${technical.container}`}>
 					<div className={technical.copy}>
 						<CopyBlock
-							title="Logical Thinking"
+							title="Strategic Thinking"
 							icon={['fas', 'chart-network']}
-							copy="With a strong foundation in both design and development, I leverage logical thinking to approach every project. I bring a unique perspective, constantly seeking innovative solutions and staying up-to-date with the latest industry trends."
+							copy="With a solid foundation in architectural design and engineering, we approach every project with strategic thinking. Our innovative solutions and up-to-date industry practices ensure that we deliver exceptional results tailored to our clients' needs."
 							iconClass={technical.icon}
 							containerClass={technical.container}
 						/>
 
 						<BadgesBlock
-							title="Software I love to work with"
-							copy="As a self-taught programmer with a passion for project development, I have a deep and intuitive understanding of how the interfaces of the best software products in the world are designed. I particularly enjoy working with tools like VS Code and JetBrains software to create exceptional projects."
+							title="Software We Excel In"
+							copy="Our team is proficient in industry-leading software that enhances our design and consulting services. From detailed architectural plans to interior design, we utilize powerful tools to bring your vision to life."
 							list={software}
 							block="software"
 							fullContainer="fullContainer"
@@ -47,8 +46,8 @@ export default function Technical() {
 							headerIcon={technical.icon} invertedColor={undefined}						/>
 
 						<BadgesBlock
-							title="Technologies I love to build with"
-							copy="As a passionate problem solver, I thrive on creating innovative solutions through coding. From front-end development to back-end systems and APIs, I embrace challenges and enjoy pushing the boundaries of what's possible."
+							title="Technologies We Implement"
+							copy="We specialize in using advanced technologies to deliver comprehensive architectural and engineering solutions. Our expertise spans from detailed 3D modeling to precise structural analysis, ensuring that your projects are built on a foundation of excellence."
 							list={tech}
 							block="tech"
 							fullContainer="fullContainer"
@@ -58,7 +57,7 @@ export default function Technical() {
 
 					</div>
 					<div className={`${technical.image} ${technical.technicalSvg}`}>
-						<Image src="/img/dataism-24.svg" width={477} height={1111} alt="data string background"   loading="eager" />
+						<Image src="/img/dataism-24.svg" width={477} height={1111} alt="data string background" loading="eager" />
 					</div>
 				</section>	
 			</Container>
@@ -66,54 +65,50 @@ export default function Technical() {
 		</Section>
 	)
 }
-{/*Badge Block*/}
+
+
+// Badge Block
 const software = [
-	{ key: 'photoshop', 	name: 'Photoshop', 			type: 'devicon' },
-	{ key: 'figma', 		name: 'Figma', 				type: 'devicon' },
-	{ key: 'jetbrains', name: 'Jetbrains', type: 'devicon' },
-	{ key: 'vscode', 		name: 'VSCode', 			type: 'devicon' },
-	{key:'blender',name:'blender',type:'devicon'},
-	{key:'unity',name:'unity',type:'devicon'},
-	{key:'androidstudio',name:'AndroidStudio',type:'devicon'},
-	{key:'unrealengine',name:'UnrealEngine',type:'devicon'}
-
-
-
+	{ key: 'photoshop', name: 'Photoshop', type: 'devicon' },
+	{ key: 'figma', name: 'AutoCAD', type: 'devicon' },
+	{ key: 'jetbrains', name: 'SketchUp', type: 'devicon' },
+	{ key: 'vscode', name: 'Revit', type: 'devicon' },
+	{ key: 'blender', name: 'Lumioun', type: 'devicon' },
+	{ key: 'unity', name: 'V-Ray', type: 'devicon' },
+	{ key: 'androidstudio', name: '3ds Max', type: 'devicon' },
+	{ key: 'unrealengine', name: 'Archicad', type: 'devicon' }
 ]
 
 
 const tech = [
-	{ key: 'javascript', name: 'JavaScript', type: 'devicon' },
-	{ key: 'nodejs', name: 'NodeJS', type: 'devicon' },
-	{ key: 'react', name: 'React', type: 'devicon' },
-	{ key: 'nextjs', name: 'NextJS', type: 'devicon' },
-	{ key: 'php', name: 'PHP', type: 'devicon' },
-	{ key: 'wordpress', name: 'WordPress', type: 'devicon' },
-	{ key: 'html5', name: 'HTML5', type: 'devicon' },
-	{ key: 'css3', name: 'CSS3', type: 'devicon' },
-	{ key: 'sass', name: 'SASS', type: 'devicon' },
-	{ key: 'git', name: 'Git', type: 'devicon' },
-	{ key: 'mysql', name: 'MySQL', type: 'devicon' },
-	{ key: 'mongodb', name: 'MongoDB', type: 'devicon' },
-	{ key: 'python', name: 'Python', type: 'devicon' },
-	{ key: 'java', name: 'Java', type: 'devicon' },
-	{ key: 'csharp', name: 'C#', type: 'devicon' },
-	{ key: 'django', name: 'Django', type: 'devicon' },
-	{ key: 'typescript', name: 'TypeScript', type: 'devicon' },
-	{ key: 'c', name: 'C', type: 'devicon' },
-	{ key: 'cplusplus', name: 'C++', type: 'devicon' },
-	{ key: 'jquery', name: 'jQuery', type: 'devicon' },
-	{ key: 'kotlin', name: 'Kotlin', type: 'devicon' },
-	{ key: 'vuejs', name: 'Vuejs', type: 'devicon' },
-	{ key: 'tailwind', name: 'TailwindCSS', type: 'devicon' },
-	{ key: 'bootstrap', name: 'Bootstrap', type: 'devicon' },
-	{ key: 'npm', name: 'npm', type: 'devicon' },
-	{ key: 'yarn', name: 'Yarn', type: 'devicon' },
-	{key:"angularjs",name:"AngularJS",type:"devicon"},
-	{key:"android",name:"Android",type:"devicon"},
-	{key:"firebase",name:"Firebase",type:"devicon"},
-	{key:"flask",name:"Flask",type:"devicon"}
-
-
-
+	{ key: 'javascript', name: 'Lumion', type: 'devicon' },
+	{ key: 'nodejs', name: 'AutoCAD', type: 'devicon' },
+	{ key: 'react', name: 'Revit', type: 'devicon' },
+	{ key: 'nextjs', name: 'SketchUp', type: 'devicon' },
+	{ key: 'php', name: 'Photoshop', type: 'devicon' },
+	{ key: 'wordpress', name: '3ds Max', type: 'devicon' },
+	{ key: 'html5', name: 'Archicad', type: 'devicon' },
+	{ key: 'css3', name: 'Chief Architect', type: 'devicon' },
+	{ key: 'sass', name: 'V-Ray', type: 'devicon' },
+	{ key: 'git', name: 'Enscape', type: 'devicon' },
+	{ key: 'mysql', name: 'Rhino', type: 'devicon' },
+	{ key: 'mongodb', name: 'Grasshopper', type: 'devicon' },
+	{ key: 'python', name: 'Vectorworks', type: 'devicon' },
+	{ key: 'java', name: 'Twinmotion', type: 'devicon' },
+	{ key: 'csharp', name: 'Blender', type: 'devicon' },
+	{ key: 'django', name: 'InDesign', type: 'devicon' },
+	{ key: 'typescript', name: 'CorelDRAW', type: 'devicon' },
+	{ key: 'c', name: 'SketchBook', type: 'devicon' },
+	{ key: 'cplusplus', name: 'Affinity Designer', type: 'devicon' },
+	{ key: 'jquery', name: 'Adobe Illustrator', type: 'devicon' },
+	{ key: 'kotlin', name: 'Floorplanner', type: 'devicon' },
+	{ key: 'vuejs', name: 'Cedreo', type: 'devicon' },
+	{ key: 'tailwind', name: 'Roomstyler', type: 'devicon' },
+	{ key: 'bootstrap', name: 'HomeByMe', type: 'devicon' },
+	{ key: 'npm', name: 'Sweet Home 3D', type: 'devicon' },
+	{ key: 'yarn', name: 'Planner 5D', type: 'devicon' },
+	{ key: 'angularjs', name: 'Live Home 3D', type: 'devicon' },
+	{ key: 'android', name: 'TAD Designer', type: 'devicon' },
+	{ key: 'firebase', name: 'Roomle', type: 'devicon' },
+	{ key: 'flask', name: 'SmartDraw', type: 'devicon' }
 ];

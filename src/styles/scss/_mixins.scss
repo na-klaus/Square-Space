@@ -19,6 +19,49 @@ $mobile: 768px;
     }
   }
 }
+// Animation Mixins
+
+@mixin fade-in($duration: 0.5s) {
+  animation: fadeIn $duration ease-in-out;
+}
+
+@mixin scale-up($duration: 0.5s) {
+  animation: scaleUp $duration ease-in-out;
+}
+
+@mixin rotate-in($duration: 0.5s) {
+  animation: rotateIn $duration ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
 
 @mixin transition($speed: 300ms) {
   transition: all, cubic-bezier(0.4, 0, 0.2, 1), $speed;

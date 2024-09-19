@@ -45,7 +45,7 @@ function Custom404() {
                 </p>
                 <p style={{ fontSize: '14px' }}>
                     If you think this issues or bugs, please report them{' '}
-                    <a href="mailto:connect@square-space.in">contact us</a>
+                    <a href="/signin">contact us</a>
                 </p>
                 <button className="go-back-button404" onClick={handleGoBack}>
                     Go Back to Homepage

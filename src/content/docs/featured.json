@@ -1,19 +1,50 @@
 [
   {
-    "title": "square-space.in",
-    "pubDate": "2023-07-05",
-    "link": "edit link",
-    "author": "Square Space",
-    "thumbnail": "/img/jobs.png",
-    "categories": ["Portfolio", "Website", "Blog","personal"]
+    "name": "Ar Riyaz Ansari",
+    "position": "Lead Architect",
+    "image": "/img/team1.jpg",
+    "description": "Expert in sustainable architecture and urban planning."
   },
   {
-    "title": "logly",
-    "pubDate": "2023-12-29",
-    "link": "edit link",
-    "author": "Square Space",
-    "thumbnail": "/img/logly.png",
-    "categories": ["Python","logging"]
+    "name": "Ar Mohammed Umar Ansari",
+    "position": "Design Architect",
+    "image": "/img/team2.jpg",
+    "description": "Specializes in modern and innovative design solutions."
+  },
+  {
+    "name": "Ar Mohd Elaf Ansari",
+    "position": "Project Manager",
+    "image": "/img/team3.jpg",
+    "description": "Focused on delivering projects on time and within budget."
+  },
+  {
+    "name": "Ubada Momin",
+    "position": "Structural Engineer",
+    "image": "/img/team4.jpg",
+    "description": "Expert in structural integrity and safety assessments."
+  },
+  {
+    "name": "Navish Ansari",
+    "position": "Senior Developer",
+    "image": "/img/team5.jpg",
+    "description": "Leads the development of interactive and dynamic web solutions."
+  },
+  {
+    "name": "Team Member 6",
+    "position": "Interior Designer",
+    "image": "/img/team6.jpg",
+    "description": "Specializes in interior aesthetics and functional design."
+  },
+  {
+    "name": "Team Member 7",
+    "position": "Urban Planner",
+    "image": "/img/team7.jpg",
+    "description": "Experienced in urban development and sustainable planning."
+  },
+  {
+    "name": "Team Member 8",
+    "position": "Landscape Architect",
+    "image": "/img/team8.jpg",
+    "description": "Designs eco-friendly landscapes and outdoor environments."
   }
-
 ]

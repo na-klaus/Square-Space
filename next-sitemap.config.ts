@@ -1,4 +1,4 @@
-const siteUrl = 'https://localhost:3000'; // Replace with your website's URL
+const siteUrl = 'https://www.square-space.in'; // Replace with your website's URL
 
 module.exports = {
     siteUrl: siteUrl,

@@ -30,6 +30,7 @@ img {
 img:hover {
   filter: brightness(var(--brightness-high));
 }
+
 button.button {
   cursor: pointer;
   font-family: var(--font-accent);

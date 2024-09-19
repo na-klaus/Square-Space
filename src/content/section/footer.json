@@ -46,18 +46,15 @@
 	"social": [
 		{
 			"url": "https://medium.com/",
-			"icon": "medium"
+			"icon": "instagram"
 		},
+		
 		{
-			"url": "https://dev.to/",
-			"icon": "dev"
-		},
-		{
-			"url": "https://www.linkedin.com/in//",
+			"url": "https://www.linkedin.com/company/square-space-1",
 			"icon": "linkedin"
 		},
 		{
-			"url": "https://github.com/",
+			"url": "https://github.com/Square-Space-Architects",
 			"icon": "github"
 		}
 	]

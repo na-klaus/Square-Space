@@ -204,7 +204,7 @@ export default function Document() {
                 "name": "How can I contact Square Space?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "You can contact Square Space at +91-9324555058 or via email at info@square-space.in."
+                  "text": "You can contact Square Space at +91-9324555058 or via email at connect@square-space.in."
                 }
               }
             ]

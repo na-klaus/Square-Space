@@ -89,12 +89,12 @@ export default function Footer(): JSX.Element {
 						<ul>
 							<li>
 								<p>
-									<Icon icon={['fad', 'code-branch']} /> Forks: {gitHubInfo.forks}
+									<Icon icon={['fad', 'code-branch']} />  {gitHubInfo.forks}
 								</p>
 							</li>
 							<li>
 								<p>
-									<Icon icon={['fad', 'star']} /> Stars: {gitHubInfo.stars}
+									<Icon icon={['fad', 'star']} />  {gitHubInfo.stars}
 								</p>
 							</li>
 						</ul>

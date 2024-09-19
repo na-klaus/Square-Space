@@ -1,0 +1,99 @@
+
+[
+    {
+        "title": "Architectural Design",
+        "description": "Innovative and sustainable architectural design solutions tailored to your needs.",
+        "image": "/img/architectural-design.jpg",
+        "link": "/services/architectural-design",
+        "types": [
+            "Residential",
+            "Commercial",
+            "Industrial",
+            "Interior Design"
+        ]
+    },
+    {
+        "title": "Structural Engineering",
+        "description": "Expert structural engineering services ensuring safety and efficiency in every project.",
+        "image": "/img/structural-engineering.jpg",
+        "link": "/services/structural-engineering",
+        "types": [
+            "Structural Analysis",
+            "Reinforced Concrete",
+            "Steel Structures",
+            "Load Bearing Walls"
+        ]
+    },
+    {
+        "title": "Project Management",
+        "description": "Comprehensive project management services to ensure your project is completed on time and within budget.",
+        "image": "/img/project-management.jpg",
+        "link": "/services/project-management",
+        "types": [
+            "Project Planning",
+            "Risk Management",
+            "Cost Control",
+            "Quality Assurance"
+        ]
+    },
+    {
+        "title": "Urban Planning",
+        "description": "Strategic urban planning services for the development of functional and aesthetically pleasing urban spaces.",
+        "image": "/img/urban-planning.jpg",
+        "link": "/services/urban-planning",
+        "types": [
+            "Land Use Planning",
+            "Transportation Planning",
+            "Environmental Planning",
+            "Community Planning"
+        ]
+    },
+    {
+        "title": "Legal Consulting",
+        "description": "Professional legal consulting services to navigate complex regulations and ensure compliance.",
+        "image": "/img/legal-consulting.jpg",
+        "link": "/services/legal-consulting",
+        "types": [
+            "Building Permits",
+            "Zoning Laws",
+            "Contract Review",
+            "Regulatory Compliance"
+        ]
+    },
+    {
+        "title": "Interior Design",
+        "description": "Customized interior design services to create beautiful and functional interior spaces.",
+        "image": "/img/interior-design.jpg",
+        "link": "/services/interior-design",
+        "types": [
+            "Residential Interiors",
+            "Commercial Interiors",
+            "Space Planning",
+            "Furniture Design"
+        ]
+    },
+    {
+        "title": "Sustainable Design",
+        "description": "Eco-friendly design solutions that minimize environmental impact and promote sustainability.",
+        "image": "/img/sustainable-design.jpg",
+        "link": "/services/sustainable-design",
+        "types": [
+            "Green Building",
+            "Energy Efficiency",
+            "Renewable Resources",
+            "Waste Reduction"
+        ]
+    },
+    {
+        "title": "NOC Services",
+        "description": "Comprehensive NOC services to ensure your project meets all necessary regulations and requirements.",
+        "image": "/img/noc-services.jpg",
+        "link": "/services/noc-services",
+        "types": [
+            "Construction NOC",
+            "Fire Safety NOC",
+            "Environmental NOC",
+            "Health and Safety NOC"
+        ]
+    }
+]

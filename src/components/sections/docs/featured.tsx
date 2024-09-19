@@ -1,61 +1,26 @@
-
 import Section from '../../structure/section';
 import Container from '../../structure/container';
+import SectionTitle from '../../blocks/section.title';
+import css from '../../../styles/scss/sections/articles/team.module.scss';
 
-import Image from 'next/image'
-import SectionTitle from '../../blocks/section.title'
-
-import Icon from '../../utils/icon'
-
-import css from '../../../styles/scss/sections/articles/recent.module.scss'
-import docs from '../../../content/docs/featured.json'
-import React from "react";
-
-export default function Recent({ }) {
-
-
+export default function Recent() {
     return (
         <Section classProp="borderBottom">
-            {/* @ts-ignore */}
+            {/* Placeholder message */}
             <Container spacing={'verticalXXXXLrg'}>
                 <SectionTitle
-                    title="Featured Docs"
-                    preTitle="Documentation"
-                    subTitle="featured documentation of projects"
+                    title="Our Team"
+                    preTitle="Update In Progress"
+                    subTitle="We are currently updating this section. Please check back soon for the latest team information."
                 />
-                <section className={css.projects}>
-                    {
-                        docs.map( ({ title, pubDate, link, author, thumbnail, categories }, index) => {
-                            const date = new Date(pubDate).toDateString()
-                            return (
-                                <>
-                                    <article key={index} className={css.project}>
-								<span className={css.featuredImage}>
-                                    <Image src={thumbnail} alt="Documentation thumbnail" height={300} width={300}  loading="eager" />
-								</span>
-                                        <span className={css.header}>
-									<a href={link} rel="noreferrer" target="_blank">{title} <Icon icon={[ 'fad', 'arrow-up-right-from-square' ]} /></a>
-								</span>
-                                        <span className={css.descriptionContainer}>
-								</span>
-                                        <span className={css.details}>
-									<p>By {author}</p>
-									<p className={css.pushedAt}>{date}</p>
-								</span>
-                                        <span className={css.topicsContainer}>
-									{
-                                        categories.map( (e, index) => {
-                                            return ( <span key={index} className={css.topics}><Icon icon={[ 'fab', 'medium' ]} /> {e}</span> )
-                                        })
-                                    }
-								</span>
-                                    </article>
-                                </>
-                            )
-                        })
-                    }
+
+                {/* Optional: A simple placeholder section */}
+                <section className={css.teamGrid}>
+                    <div className={css.placeholder}>
+                        <p>Our team information will be updated shortly. Thank you for your patience!</p>
+                    </div>
                 </section>
             </Container>
         </Section>
-    )
+    );
 }

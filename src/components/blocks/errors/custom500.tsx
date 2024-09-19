@@ -41,7 +41,7 @@ function Custom500() {
                 <p className="not-found-text404">
                     {/* eslint-disable-next-line react/no-unescaped-entities */}
                     Oops! It seems like we've encountered a server error on my
-                    portfolio website.
+                    architectural website.
                 </p>
                 <p style={{ fontSize: '14px' }}>
                     If you think this is an issue or bug, please report it{' '}

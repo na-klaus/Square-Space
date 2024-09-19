@@ -26,6 +26,7 @@ const RecentArticles: React.FC<RecentArticlesProps> = ({ mediumArticles }) => {
           preTitle="Stay Informed"
           subTitle="Read about our latest articles and insights into the world of architecture and design."
         />
+        
         <section className={css.articles}>
           {mediumArticles.map(({ title, description, image, image2x, image3x, types }, index) => (
             <article key={index} className={css.article}>

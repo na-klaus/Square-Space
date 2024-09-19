@@ -1,16 +1,16 @@
 // Core packages
-import Badges from '../../../utils/badge.list'
+import Badges from '../../../utils/badge.list';
 
 // Section structure
 import Section from '../../../structure/section';
 import Container from '../../../structure/container';
 
 // Section general blocks
-import SectionTitle from '../../../blocks/section.title'
+import SectionTitle from '../../../blocks/section.title';
 
 // Career scss (now for Job Openings)
-import career from '../../../../styles/scss/sections/index/career.module.scss'
-import Education from "./education";
+import career from '../../../../styles/scss/sections/index/career.module.scss';
+import Education from './education';
 
 export default function JobOpenings() {
 	return (
@@ -32,7 +32,7 @@ export default function JobOpenings() {
 								We are seeking a Junior Architect with a minimum of 6 months experience or a motivated fresher with strong skills in architectural design software. The ideal candidate should be proficient in AutoCAD, Lumion, and SketchUp.
 							</p>
 							<p>
-								If you're passionate about architecture, have a keen eye for detail, and are eager to contribute to impactful projects, we want to hear from you.
+								If you&apos;re passionate about architecture, have a keen eye for detail, and are eager to contribute to impactful projects, we want to hear from you.
 							</p>
 							<a href="mailto:connect@square-space.in" className={career.applyButton}>Apply Now</a>
 						</div>

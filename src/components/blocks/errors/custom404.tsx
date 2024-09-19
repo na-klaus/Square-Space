@@ -1,7 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import { Player } from "@lottiefiles/react-lottie-player";
-
+import Link from 'next/link';
 function Custom404() {
     const router = useRouter();
 
@@ -45,7 +45,7 @@ function Custom404() {
                 </p>
                 <p style={{ fontSize: '14px' }}>
                     If you think this issues or bugs, please report them{' '}
-                    <a href="/signin">contact us</a>
+                    <Link href="/signin/">Sign In</Link>
                 </p>
                 <button className="go-back-button404" onClick={handleGoBack}>
                     Go Back to Homepage

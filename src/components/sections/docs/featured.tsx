@@ -7,7 +7,7 @@ export default function Recent() {
     return (
         <Section classProp="borderBottom">
             {/* Placeholder message */}
-            <Container spacing={'verticalXXXXLrg'}>
+            <Container spacing={['verticalXXXXLrg']}>
                 <SectionTitle
                     title="Our Team"
                     preTitle="Update In Progress"

@@ -1,8 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://www.square-space.in/</loc><lastmod>2023-06-25T09:58:15.219Z</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
-<url><loc>https://www.square-space.in//articles</loc><lastmod>2023-06-25T09:58:15.219Z</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
-<url><loc>https://www.square-space.in//docs</loc><lastmod>2023-06-25T09:58:15.219Z</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
-<url><loc>https://www.square-space.in//icons</loc><lastmod>2023-06-25T09:58:15.219Z</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
-<url><loc>https://www.square-space.in//projects</loc><lastmod>2023-06-25T09:58:15.219Z</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+    <url>
+        <loc>https://www.square-space.in/</loc>
+        <lastmod>2023-06-25T09:58:15.219Z</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://www.square-space.in/articles</loc>
+        <lastmod>2023-06-25T09:58:15.219Z</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://www.square-space.in/docs</loc>
+        <lastmod>2023-06-25T09:58:15.219Z</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://www.square-space.in/icons</loc>
+        <lastmod>2023-06-25T09:58:15.219Z</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://www.square-space.in/projects</loc>
+        <lastmod>2023-06-25T09:58:15.219Z</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
 </urlset>

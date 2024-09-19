@@ -3,13 +3,15 @@ import Section from '../../structure/section';
 import Container from '../../structure/container';
 import signin from '../../../styles/scss/sections/index/about.module.scss';
 import { useRouter } from 'next/router';
+
 export default function ContactUs() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const router = useRouter();
 
-    const handleFormSubmit = async (e) => {
+    // Define the event type explicitly
+    const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         try {
             // Generate mailto link

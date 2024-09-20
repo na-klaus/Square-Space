@@ -9,7 +9,7 @@ export default function Document() {
                 <meta charSet="utf-8" />
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
                 {/* eslint-disable-next-line @next/next/no-title-in-document-head */}
-                <title>Square Space - Architects and Consulting Engineers</title>
+            
                 <meta
                     name="description"
                     content="Square Space - Experts in architecture, legal consulting, structured planning, interior designing, NOC, and building permissions. Discover our projects and services."

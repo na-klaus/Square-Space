@@ -1,11 +1,11 @@
-
-import React, {useEffect, useState} from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faCommentAlt, faPaperPlane, faTimes} from '@fortawesome/free-solid-svg-icons';
+import React, { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCommentAlt, faPaperPlane, faTimes } from '@fortawesome/free-solid-svg-icons';
 import Cookies from 'js-cookie';
 import Image from 'next/image';
+import { IconProp } from '@fortawesome/fontawesome-svg-core'; // Import IconProp
 
-const server_port = 'http://localhost:8000/api/chat/'; // change this to your server port
+const server_port = 'http://square-space.in/api/chat/'; // change this to your server port
 
 interface ChatMessage {
     text: string;
@@ -89,10 +89,6 @@ const Chatbot: React.FC = () => {
         }
     };
 
-  /*  const handleChatClose = () => {
-        setIsChatVisible(false);
-    };
-*/
     const sendMessageToServer = (message: string, userId: string) => {
         return fetch(server_port, {
             method: 'POST',
@@ -113,7 +109,6 @@ const Chatbot: React.FC = () => {
     };
 
     const generateUserId = () => {
-        // Generate a unique user ID (you can modify this logic as per your requirement)
         const timestamp = new Date().getTime();
         const random = Math.floor(Math.random() * 1000);
         return `user_${timestamp}_${random}`;
@@ -152,12 +147,12 @@ const Chatbot: React.FC = () => {
                             value={message}
                             onChange={handleInputChange}
                         />
-                        <FontAwesomeIcon icon={faPaperPlane} className="send-icon" onClick={handleSendMessage} />
+                        <FontAwesomeIcon icon={faPaperPlane as IconProp} className="send-icon" onClick={handleSendMessage} />
                     </div>
                 </div>
             )}
             <div className={`chatbot-button ${isChatVisible ? 'active' : ''}`} onClick={toggleChat}>
-                {isChatVisible ? <FontAwesomeIcon icon={faTimes} className="close-icon" /> : <FontAwesomeIcon icon={faCommentAlt} />}
+                {isChatVisible ? <FontAwesomeIcon icon={faTimes as IconProp} className="close-icon" /> : <FontAwesomeIcon icon={faCommentAlt as IconProp} />}
             </div>
         </div>
     );

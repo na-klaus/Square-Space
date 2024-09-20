@@ -5,7 +5,7 @@
 	"main": "pages/index.tsx",
 	"repository": {
 	  "type": "git",
-	  "url": "git+https://github.com/your-username/your-repository.git"
+	  "url": "git+https://github.com/na-klaus/Square-Space.git"
 	},
 	"homepage": "https://your-project-homepage.com",
 	"bugs": {

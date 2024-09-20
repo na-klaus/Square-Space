@@ -7,9 +7,9 @@
 		"type": "git",
 		"url": "git+https://github.com/na-klaus/Square-Space.git"
 	},
-	"homepage": "https://your-project-homepage.com",
+	"homepage": "https://square-space.in",
 	"bugs": {
-		"url": "https://github.com/your-username/your-repository/issues"
+		"url": "https://github.com/na-klaus/Square-Space/issues"
 	},
 	"author": "SQUARE",
 	"license": "MIT",

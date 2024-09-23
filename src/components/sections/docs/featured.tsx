@@ -1,24 +1,44 @@
 import Section from '../../structure/section';
 import Container from '../../structure/container';
+import Image from 'next/image';
 import SectionTitle from '../../blocks/section.title';
+import Icon from '../../utils/icon';
 import css from '../../../styles/scss/sections/articles/team.module.scss';
+import teamData from '../../../content/docs/featured.json';
 
 export default function Recent() {
     return (
         <Section classProp="borderBottom">
-            {/* Placeholder message */}
-            <Container spacing={['verticalXXXXLrg']}>
+            {/* @ts-ignore */}
+            <Container spacing={'verticalXXXXLrg'}>
                 <SectionTitle
-                    title="Our Team"
-                    preTitle="Update In Progress"
-                    subTitle="We are currently updating this section. Please check back soon for the latest team information."
+                    title="Meet the Minds Behind Our Success"
+                    preTitle="Our Expert Team"
+                    subTitle="The dedicated professionals driving our vision forward."
                 />
 
-                {/* Optional: A simple placeholder section */}
                 <section className={css.teamGrid}>
-                    <div className={css.placeholder}>
-                        <p>Our team information will be updated shortly. Thank you for your patience!</p>
-                    </div>
+                    {
+                        teamData.map(({ name, position, image, description }, index) => (
+                            <article key={index} className={css.teamMember}>
+                                <div className={css.imageWrapper}>
+                                    <Image 
+                                        src={image} 
+                                        alt={`Image of ${name}`} 
+                                        height={300} 
+                                        width={300} 
+                                        loading="eager" 
+                                        className={css.teamImage} 
+                                    />
+                                </div>
+                                <div className={css.textWrapper}>
+                                    <h3 className={css.teamName}>{name}</h3>
+                                    <p className={css.teamPosition}>{position}</p>
+                                    <p className={css.teamDescription}>{description}</p>
+                                </div>
+                            </article>
+                        ))
+                    }
                 </section>
             </Container>
         </Section>

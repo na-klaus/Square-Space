@@ -24,24 +24,35 @@ const QnA: React.FC = () => {
     };
 
     return (
-        <Section classProp={`${career.section} borderBottom`}>
+        <Section classProp={`${career.section} py-16`}>
             <Container spacing={['verticalXXXLrg']}>
-                <SectionTitle title="Q & A" preTitle="" subTitle="Get your Questions answered." />
+                <SectionTitle 
+                    title="Q & A" 
+                    preTitle="" 
+                    subTitle="Find answers to frequently asked questions." 
+                />
 
-                <div className={career.area}>
+                <div className="qna-section space-y-4">
                     {qnas.map((qna, index) => (
-                        <div key={index} className={career.company}>
+                        <div key={index} className="qna-item border-b pb-4">
                             <div
-                                className={career.companyContent}
-                                style={{ cursor: 'pointer', fontWeight: 'bold' }}
+                                className="question font-semibold text-lg cursor-pointer flex justify-between items-center p-4 bg-gray-200 rounded-md"
                                 onClick={() => toggleAnswer(index)}
                             >
-                                {qna.question}
+                                <span>{qna.question}</span>
+                                <span>{qna.isOpen ? '-' : '+'}</span>
                             </div>
-                            {qna.isOpen && <div className={career.companyContent}>{qna.answer}</div>}
+                            {qna.isOpen && (
+                                <div className="answer text-gray-700 mt-2 p-4 bg-white rounded-md shadow-sm">
+                                    {qna.answer}
+                                </div>
+                            )}
                         </div>
                     ))}
                 </div>
+
+                {/* Click Me Button */}
+                
             </Container>
         </Section>
     );

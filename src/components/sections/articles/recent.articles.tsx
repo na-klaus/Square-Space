@@ -24,7 +24,7 @@ const servicesData = [
         image2x: "/img/consultancy@2x.jpg",
         image3x: "/img/consultancy@3x.jpg",
         types: [
-            "Architectural Planning", "Interior Design Consultancy", "Urban Development", "Project Management"
+            "Architectural Planning", "Urban Development", "Project Management"
         ]
     }
     ,
@@ -45,7 +45,7 @@ const servicesData = [
         image2x: "/img/interior@2x.jpg",
         image3x: "/img/interior@3x.jpg",
         types: [
-            "Residential Interiors", "Commercial Interiors", "Space Planning", "Furniture Design"
+            "Residential Interiors", "Commercial Interiors", "Space Planning"
         ]
     },
 ];

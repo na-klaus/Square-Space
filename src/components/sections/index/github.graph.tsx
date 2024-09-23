@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import SectionTitle from "../../blocks/section.title";
 import Section from "../../structure/section";
 
@@ -12,31 +12,54 @@ const historyEvents = [
     { year: 2024, event: "Execution of Square Space Vision", details: "Square Space was successfully executed, establishing a new era of integrated and sustainable architectural services." }
 ];
 
-
 export default function HistorySection() {
+    const eventRefs = useRef<(HTMLDivElement | null)[]>([]);
+    const isDarkTheme = false;
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        eventRefs.current.forEach(event => {
+            if (event) observer.observe(event);
+        });
+
+        return () => observer.disconnect();
+    }, []);
+
+    const assignRef = (el: HTMLDivElement | null, index: number) => {
+        eventRefs.current[index] = el;
+    };
+
     return (
         <Section classProp="bg-transparent border-b border-gray-300 py-16">
-            <section className="relative mx-auto max-w-screen-lg flex flex-col items-center">
+            <section className="relative mx-auto max-w-screen-lg">
                 <SectionTitle
                     title="Company History"
                     preTitle="Timeline"
                     subTitle="A journey through our key milestones and achievements in construction."
                 />
-                <div className="relative w-full flex flex-col items-center space-y-12">
+                <div className="timelineGrid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
                     {historyEvents.map((event, index) => (
-                        <div key={event.year} className="relative w-full flex flex-col items-center my-8">
-                            {index > 0 && (
-                                <div className="w-full flex justify-center">
-                                    <div className="w-px h-24 bg-gray-300"></div>
+                        <div
+                            key={event.year}
+                            ref={(el) => assignRef(el, index)}
+                            className={`eventCard rounded-lg shadow-lg p-6 relative transition-all duration-300 transform hover:scale-105 ${isDarkTheme ? 'dark' : ''}`}
+                        >
+                            <div className="year text-center text-2xl font-bold text-blue-600 mb-4">{event.year}</div>
+                            <h3 className="eventTitle text-xl font-semibold text-gray-800">{event.event}</h3>
+                            <p className="eventDetails text-gray-600 mt-2">{event.details}</p>
+                            {index < historyEvents.length - 1 && (
+                                <div className="arrow-container absolute left-1/2 transform -translate-x-1/2 top-full mt-4">
+                                    <div className="arrow arrow-left"></div>
+                                    <div className="arrow arrow-right"></div>
                                 </div>
                             )}
-                            <div className="z-0 flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg">
-                                <span className="text-xl font-bold text-white">{event.year}</span>
-                            </div>
-                            <div className="w-full px-4 py-4 bg-white rounded-lg shadow-lg text-center mt-4">
-                                <h3 className="text-xl font-semibold text-gray-800">{event.event}</h3>
-                                <p className="text-gray-600 mt-2">{event.details}</p>
-                            </div>
                         </div>
                     ))}
                 </div>

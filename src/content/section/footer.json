@@ -4,11 +4,6 @@
 			"person": "square-space.in",
 			"link": "https://www.square-space.in//",
 			"note": ""
-		},
-		{
-			"person": "square-space.in",
-			"link": "square-space.in/",
-			"note": ""
 		}
 
 	],
@@ -20,12 +15,12 @@
 			"note": ""
 		},
 		{ 
-			"person": "Documentations",
+			"person": "Teams",
 			"link": "https://www.square-space.in//docs",
 			"note": ""
 		},	{
-			"person": "Articles",
-			"link": "https://www.square-space.in//articles",
+			"person": "Services",
+			"link": "https://www.square-space.in//services",
 			"note": ""
 		},
 
@@ -45,7 +40,7 @@
 
 	"social": [
 		{
-			"url": "https://medium.com/",
+			"url": "https://instagra.com/_square_space__",
 			"icon": "instagram"
 		},
 		
@@ -58,4 +53,5 @@
 			"icon": "github"
 		}
 	]
+
 }

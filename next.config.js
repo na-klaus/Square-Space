@@ -1,3 +1,4 @@
+// next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	images: {
@@ -23,22 +24,7 @@ const nextConfig = {
 		},
 		{
 		  protocol: 'https',
-		  hostname: '**.shields.io',
-		  pathname: '/github/**',
-		},
-		{
-		  protocol: 'https',
 		  hostname: '**.githubusercontent.com',
-		  pathname: '/**',
-		},
-		{
-		  protocol: 'https',
-		  hostname: '**.medium.com',
-		  pathname: '/**',
-		},
-		{
-		  protocol: 'https',
-		  hostname: '**.dev.to',
 		  pathname: '/**',
 		},
 		{
@@ -51,16 +37,8 @@ const nextConfig = {
 	reactStrictMode: true,
 	swcMinify: true,
 	experimental: {
-	  forceSwcTransforms: true, // Ensure this is necessary
+	  forceSwcTransforms: true, // Optional, verify if necessary
 	},
-	// Optional: Remove or customize if not needed
-	// webpack: (config) => {
-	//   return config;
-	// },
-	// env: {
-	//   // Remove if not needed
-	// },
-  };
-  
-  module.exports = nextConfig;
-  
+};
+
+module.exports = nextConfig;

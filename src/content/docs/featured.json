@@ -1,50 +1,44 @@
 [
   {
+    "name": "Ar  Elaf Ansari",
+    "position": "Principle Architect",
+    "image": "/img/team3.png",
+    "description": "Expert in 2D planning and drafting, ensuring precision and creativity in every project."
+  },
+  {
     "name": "Ar Riyaz Ansari",
-    "position": "Lead Architect",
+    "position": "Architectural Designer",
     "image": "/img/team1.jpg",
-    "description": "Expert in sustainable architecture and urban planning."
+    "description": "Passionate about sustainable design, bringing innovative architectural solutions to life."
   },
   {
     "name": "Ar Mohammed Umar Ansari",
-    "position": "Design Architect",
-    "image": "/img/team2.jpg",
-    "description": "Specializes in modern and innovative design solutions."
-  },
-  {
-    "name": "Ar Mohd Elaf Ansari",
-    "position": "Project Manager",
-    "image": "/img/team3.jpg",
-    "description": "Focused on delivering projects on time and within budget."
+    "position": "3D Visualization Specialist",
+    "image": "/img/team4.jpg",
+    "description": "Transforming concepts into captivating 3D visualizations, bridging the gap between design and reality."
   },
   {
     "name": "Ubada Momin",
-    "position": "Structural Engineer",
-    "image": "/img/team4.jpg",
-    "description": "Expert in structural integrity and safety assessments."
+    "position": "AutoCAD Technician",
+    "image": "/img/team2.jpg",
+    "description": "Skilled in drafting detailed designs, turning creative ideas into structured plans with accuracy."
+  },
+  {
+    "name": "Siddhart",
+    "position": "Regulatory Liaison Officer",
+    "image": "/img/team9.jpg",
+    "description": "Navigating the complexities of regulations to ensure smooth project approvals and compliance."
+  },
+  {
+    "name": "Roem",
+    "position": "Junior Architect",
+    "image": "/img/team10.jpg",  
+    "description": "Eager to learn and contribute, assisting in the development of innovative architectural designs."
   },
   {
     "name": "Navish Ansari",
-    "position": "Senior Developer",
+    "position": "Senior Software Developer",
     "image": "/img/team5.jpg",
-    "description": "Leads the development of interactive and dynamic web solutions."
-  },
-  {
-    "name": "Team Member 6",
-    "position": "Interior Designer",
-    "image": "/img/team6.jpg",
-    "description": "Specializes in interior aesthetics and functional design."
-  },
-  {
-    "name": "Team Member 7",
-    "position": "Urban Planner",
-    "image": "/img/team7.jpg",
-    "description": "Experienced in urban development and sustainable planning."
-  },
-  {
-    "name": "Team Member 8",
-    "position": "Landscape Architect",
-    "image": "/img/team8.jpg",
-    "description": "Designs eco-friendly landscapes and outdoor environments."
+    "description": "Leading the charge in crafting interactive web solutions that elevate user experience."
   }
 ]

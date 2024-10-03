@@ -1,98 +1,74 @@
-import React, { useState } from 'react';
-import { TypeAnimation } from 'react-type-animation';
-
+import React, { useState, useEffect } from 'react';
 import Section from '../../structure/section';
-import Container from '../../structure/container';
 import Image from 'next/image';
-
-import space from '../../utils/spacing';
-
-import HeroBg from '../../blocks/hero.bg/section-bg-color';
-
 import hero from '../../../styles/scss/sections/index/hero.module.scss';
-import button from '../../../styles/scss/blocks/button.module.scss';
-
-import content from '../../../content/index/hero.json';
 
 export default function Hero() {
-	const [, setTypingStatus] = useState('Initializing');
-	const [isHiremeTooltipVisible, setIsHiremeTooltipVisible] = useState(false);
-	const [isYescatTooltipVisible, setIsYescatTooltipVisible] = useState(false);
+  const [backgroundIndex, setBackgroundIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
-	return (
-		<Section classProp={`${hero.section}`}>
-			<Container spacing={'VerticalXXXL'}>
-				<TypeAnimation
-					className={`${hero.preHeader}`}
-					sequence={[
-						content.intro.startDelay,
-						() => {
-							setTypingStatus('typing');
-						},
-						content.intro.start,
-						() => {
-							setTypingStatus('typed');
-						},
-						content.intro.deleteDelay,
-						() => {
-							setTypingStatus('deleting');
-						},
-						content.intro.end,
-						() => {
-							setTypingStatus('deleted');
-						},
-						content.intro.restartDelay,
-					]}
-					speed={content.intro.speed}
-					deletionSpeed={content.intro.deletionSpeed}
-					wrapper={content.intro.wrapper}
-					repeat={Infinity}
-				/>
-				<section>
-					<h1 className={hero.header}>{content.header.name}</h1>
-					<h1 className={`${hero.header} ${hero.primaryDim}`}>{content.header.usp}</h1>
-				</section>
-				<section>
-					<p className={`${hero.primaryBright} subtitle ${space(['verticalLrg'])}`}>
-						{content.paragraph}
-					</p>
-				</section>
-				<section style={{ position: 'relative' }}>
-					<button
-						className={`button ${button.primary}`}
-						onClick={() => (window.location = '/signin')}
-						onMouseEnter={() => setIsHiremeTooltipVisible(true)}
-						onMouseLeave={() => setIsHiremeTooltipVisible(false)}
-					>
-						{content.buttons.primary.title}
-					</button>
-					{isHiremeTooltipVisible && (
-						<div className={`${hero.tooltipContent} ${hero.hireme_tooltip}`}>
+  const backgrounds = [
+    '/images/photo1.jpg',
+    '/images/photo2.jpg',
+    '/images/photo3.jpg',
+    '/images/photo4.jpg',
+    '/images/photo5.jpg',
+    '/images/photo6.jpg',
+    '/images/photo7.jpg',
+    '/images/photo8.jpg',
+    '/images/photo9.jpg',
+    '/images/photo10.jpg',
+    '/images/photo11.jpg',
+    '/images/photo12.jpg',
+    '/images/photo13.jpg',
+    '/images/photo14.jpg',
+    '/images/photo15.jpg',
+  ];
 
-							<Image src="/gif/hireme.gif" width={100} height={100} alt="Yescat GIF" />
+  useEffect(() => {
+    const interval = setInterval(() => {
+      // Start transition effect
+      setIsTransitioning(true);
 
-						</div>
-					)}
-					<button
-						className={`button ${button.secondary} leaveSite`}
+      // After the transition effect ends, change the image
+      setTimeout(() => {
+        setBackgroundIndex((prevIndex) => (prevIndex + 1) % backgrounds.length);
+        setIsTransitioning(false);
+      }, 1400); // Matches the CSS transition duration (2 seconds)
+    }, 4000); // Duration between image changes
 
-						onClick={() => window.open('https://www.linkedin.com/company/square-space-1', '_blank')}
+    return () => clearInterval(interval);
+  }, [backgrounds.length]);
 
-						onMouseEnter={() => setIsYescatTooltipVisible(true)}
-						onMouseLeave={() => setIsYescatTooltipVisible(false)}
-					>
-						{content.buttons.secondary.title}
-					</button>
-					{isYescatTooltipVisible && (
-						<div className={`${hero.tooltipContent} ${hero.yescat_tooltip}`}>
+  // Render the background image with dissolve and zoom effect
+  const renderBackground = () => {
+    const currentBackground = backgrounds[backgroundIndex];
+    return (
+      <div className={hero.heroBackgroundWrapper}>
+        <Image
+          src={currentBackground}
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+          priority={backgroundIndex === 0}
+          alt="background"
+          key={currentBackground}
+          className={`${hero.heroBackground} ${isTransitioning ? hero.transitionEffect : hero.activeImage}`}
+        />
+      </div>
+    );
+  };
 
-							<Image src="/gif/yes.gif" width={100} height={100} alt="GIF" />
-
-						</div>
-					)}
-				</section>
-			</Container>
-			<HeroBg theme="bg-color-1" />
-		</Section>
-	);
+  return (
+    <Section classProp={hero.section}>
+      <div className={hero.heroBackgroundContainer}>{renderBackground()}</div>
+      <div className={hero.contentWrapper}>
+        <h1 className={hero.title}>Welcome to Square Space</h1>
+        <p className={hero.subtitle}>Architectural Innovation for a Better Tomorrow</p>
+        <button className={hero.ctaButton} onClick={() => window.location.href = 'http://square-space.in/signin'}>
+          Get in Touch
+        </button>
+      </div>
+    </Section>
+  );
 }

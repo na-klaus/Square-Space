@@ -1,38 +1,50 @@
 [
   {
-    "name": "Ar  Elaf Ansari",
+    "name": "Arshad Ansari",
+    "position": "CEO AND FOUNDER",
+    "image": "/img/owner.jpg",
+    "description": "Visionary leader and driving force behind our firm's success, guiding us towards innovative architectural excellence."
+  },
+  {
+    "name": "Ar Elaf Ansari",
     "position": "Principle Architect",
     "image": "/img/team3.png",
     "description": "Expert in 2D planning and drafting, ensuring precision and creativity in every project."
   },
   {
     "name": "Ar Riyaz Ansari",
-    "position": "Architectural Designer",
+    "position": "Principle Architect",
     "image": "/img/team1.jpg",
     "description": "Passionate about sustainable design, bringing innovative architectural solutions to life."
   },
   {
     "name": "Ar Mohammed Umar Ansari",
-    "position": "3D Visualization Specialist",
+    "position": "3D Visualization",
     "image": "/img/team4.jpg",
     "description": "Transforming concepts into captivating 3D visualizations, bridging the gap between design and reality."
   },
   {
     "name": "Ubada Momin",
-    "position": "AutoCAD Technician",
+    "position": "Architectural Designer",
     "image": "/img/team2.jpg",
     "description": "Skilled in drafting detailed designs, turning creative ideas into structured plans with accuracy."
   },
   {
     "name": "Siddhart",
-    "position": "Regulatory Liaison Officer",
+    "position": "Liaisoning Head",
     "image": "/img/team9.jpg",
     "description": "Navigating the complexities of regulations to ensure smooth project approvals and compliance."
   },
   {
+    "name": "Tausif Ansari",
+    "position": "Personal Chauffeur",
+    "image": "/img/team11.jpg",
+    "description": "Providing reliable transportation services, Tausif ensures the owner’s safe and efficient travel to various engagements."
+  },
+  {
     "name": "Roem",
     "position": "Junior Architect",
-    "image": "/img/team10.jpg",  
+    "image": "/img/team10.jpg",
     "description": "Eager to learn and contribute, assisting in the development of innovative architectural designs."
   },
   {

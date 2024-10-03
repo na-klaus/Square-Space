@@ -16,11 +16,16 @@ export default function Recent() {
                     preTitle="Our Expert Team"
                     subTitle="The dedicated professionals driving our vision forward."
                 />
+                
+
 
                 <section className={css.teamGrid}>
                     {
                         teamData.map(({ name, position, image, description }, index) => (
-                            <article key={index} className={css.teamMember}>
+                            <article 
+                                key={index} 
+                                className={`${css.teamMember} ${name === "Arshad Ansari" ? css.owner : ''}`}
+                            >
                                 <div className={css.imageWrapper}>
                                     <Image 
                                         src={image} 

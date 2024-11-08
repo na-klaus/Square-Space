@@ -1,10 +1,5 @@
 [
-  {
-    "name": "Arshad Ansari",
-    "position": "CEO AND FOUNDER",
-    "image": "/img/owner.jpg",
-    "description": "Visionary leader and driving force behind our firm's success, guiding us towards innovative architectural excellence."
-  },
+  
   {
     "name": "Ar Elaf Ansari",
     "position": "Principle Architect",
@@ -18,14 +13,14 @@
     "description": "Passionate about sustainable design, bringing innovative architectural solutions to life."
   },
   {
-    "name": "Ar Mohammed Umar Ansari",
-    "position": "3D Visualization",
+    "name": "AR MOHAMMED UMAR ANSARI (@rtist)",
+    "position": "",
     "image": "/img/team4.jpg",
-    "description": "Transforming concepts into captivating 3D visualizations, bridging the gap between design and reality."
+    "description": "A visionary architect, planner, and 3D artist, transforming interiors into breathtaking works of art where functionality meets inspired design."
   },
   {
     "name": "Ubada Momin",
-    "position": "Architectural Designer",
+    "position": "Interior Designer",
     "image": "/img/team2.jpg",
     "description": "Skilled in drafting detailed designs, turning creative ideas into structured plans with accuracy."
   },

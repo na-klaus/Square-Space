@@ -1,7 +1,7 @@
 .section {
   background: var(--background);
   padding: 5rem 2rem;
-  /* Removed border-bottom to eliminate the bottom border */
+  position: relative; /* Ensure that elements stay within the flow */
 }
 
 .container {
@@ -10,176 +10,202 @@
   align-items: center;
 }
 
+/* CEO Section */
+.ownerSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem; /* Spacing below CEO section */
+  z-index: 1; /* Ensure this stays below the navbar */
+  position: relative; /* No overlapping */
+}
+
+// Owner Section Styling
+.ownerSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+  position: relative;
+  z-index: 1;
+
+  .owner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(245, 245, 245, 0.9));
+    border: 5px solid transparent;
+    border-image: linear-gradient(to right, #4e92b5, #6dc7d8, #90e3e2) 1;
+    border-radius: 1rem;
+    padding: 2.5rem; // Adjusted padding for a balanced appearance
+    width: 100%;
+    max-width: 1000px; // Slightly smaller than full screen
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: pulse 1.5s infinite alternate; // Animated effect for differentiation
+    position: relative;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .imageWrapper {
+      flex: 0 0 40%; // Adjusted image size for space balance
+      margin-right: 2rem;
+      border-radius: 1rem;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .ownerImage {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        transition: transform 0.5s ease, box-shadow 0.5s ease;
+      }
+
+      &:hover .ownerImage {
+        transform: scale(1.1);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    .textWrapper {
+      flex: 1;
+      text-align: left;
+
+      .teamName {
+        font-size: 2.5rem;
+        color: #3b3b3b;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .teamPosition {
+        font-size: 1.4rem;
+        color: #5a5a5a;
+        margin-bottom: 1rem;
+      }
+
+      .teamDescription {
+        font-size: 1.2rem;
+        color: #7a7a7a;
+        line-height: 1.7;
+      }
+    }
+  }
+}
+
+// Team Members Section Styling
 .teamGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   justify-items: center;
   width: 100%;
-  animation: fadeIn 1s ease-in-out;
-}
 
-.teamMember {
-  background: var(--card-bg);
-  border-radius: 1rem;
-  padding: 2rem;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-
-  &:hover {
-    transform: scale(1.05);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  }
-
-  .imageWrapper {
-    width: 100%;
-    height: 150px;
-    overflow: hidden;
+  .teamMember {
+    background: var(--card-bg);
     border-radius: 1rem;
-    margin-bottom: 1rem;
+    padding: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
-    z-index: 1;
+    overflow: hidden;
 
-    .teamImage {
-      object-fit: cover;
-      transition: transform 0.5s ease;
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .imageWrapper {
       width: 100%;
-      height: 100%;
-      border-radius: 1rem;
-    }
-
-    &:hover .teamImage {
-      transform: scale(1.1);
-    }
-  }
-
-  .textWrapper {
-    z-index: 1;
-
-    .teamName {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 1rem;
-      transition: color 0.3s ease;
-
-      &:hover {
-        color: var(--primary-dark);
-      }
-    }
-
-    .teamPosition {
-      font-size: 1.1rem;
-      color: var(--text-dark);
-      margin-bottom: 0.75rem;
-    }
-
-    .teamDescription {
-      font-size: 1rem;
-      color: var(--text-dark);
-      max-width: 90%;
-      margin: 0 auto;
-      line-height: 1.5;
-      transition: max-height 0.3s ease-in-out;
+      height: 250px;
       overflow: hidden;
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+      position: relative;
 
-      &:hover {
-        max-height: 150px;
+      .teamImage {
+        object-fit: cover;
+        transition: transform 0.4s ease;
+        width: 100%;
+        height: 100%;
+      }
+
+      &:hover .teamImage {
+        transform: scale(1.05);
+      }
+    }
+
+    .textWrapper {
+      .teamName {
+        font-size: 1.8rem;
+        color: var(--primary);
+        margin-bottom: 1rem;
+      }
+
+      .teamPosition {
+        font-size: 1.2rem;
+        color: var(--text-dark);
+        margin-bottom: 0.75rem;
+      }
+
+      .teamDescription {
+        font-size: 1rem;
+        color: var(--text-dark);
+        max-width: 90%;
+        margin: 0 auto;
+        line-height: 1.6;
       }
     }
   }
 }
 
-.owner {
-  display: flex; /* Flexbox for horizontal layout */
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(245, 245, 245, 0.8)); /* Light gradient for modern look */
-  animation: pulse 1.5s infinite alternate;
-  z-index: 10;
-  border: 5px solid transparent; /* Transparent border for a clean look */
-  border-image: linear-gradient(to right, #4e92b5, #6dc7d8, #90e3e2) 1; /* Cool gradient border */
-  border-radius: 1rem; /* Horizontal rectangle */
-  padding: 2rem; /* Additional padding for rectangular look */
-  width: 100%; /* Full width for owner section */
-  max-width: 800px; /* Max width to control size */
-  margin: 0 auto; /* Center the owner section within the parent container */
-
-  .imageWrapper {
-    height: 250px; /* Height for the image wrapper */
-    width: 250px; /* Width for the image */
-    margin-right: 2rem; /* Space between image and description */
-    border-radius: 1rem; /* Rounded corners for image */
-    overflow: hidden; /* Ensure any overflow is hidden */
-    display: flex; /* Flexbox for centering */
-    align-items: center; /* Center image vertically */
-    justify-content: center; /* Center image horizontally */
-    
-    .teamImage {
-      width: 100%; /* Full width */
-      height: 100%; /* Full height */
-      object-fit: cover; /* Cover to maintain aspect ratio */
-      transition: transform 0.5s ease; /* Transition for hover effect */
-    }
-
-    &:hover .teamImage {
-      transform: scale(1.1); /* Zoom effect on hover */
-    }
-  }
-
-  .textWrapper {
-    text-align: left; /* Left align text */
-    
-    .teamName {
-      font-size: 2rem; /* Increased size */
-      color: #3b3b3b; /* Darker text for better contrast */
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15); /* Subtle text shadow */
-      transition: color 0.3s ease;
-
-      &:hover {
-        color: #2a2a2a; /* Darker color on hover */
-      }
-    }
-
-    .teamPosition {
-      font-size: 1.2rem; /* Increased size */
-      color: #5a5a5a; /* Slightly lighter for contrast */
-      margin-bottom: 0.75rem;
-    }
-
-    .teamDescription {
-      font-size: 1rem; /* Maintain previous size */
-      color: #7a7a7a; /* Light gray for description */
-      line-height: 1.5;
-    }
-  }
-}
-
-/* Animations */
+// Animations and Keyframes
 @keyframes pulse {
   0% {
     transform: scale(1);
   }
   100% {
-    transform: scale(1.05);
+    transform: scale(1.03);
   }
 }
 
-/* Media Queries for Responsiveness */
+// Media Queries for Responsiveness
 @media (max-width: 768px) {
   .owner {
-    flex-direction: column; /* Stack vertically on smaller screens */
-    align-items: center; /* Center items */
+    flex-direction: column;
+    align-items: center;
+
+    .imageWrapper {
+      flex: 0 0 auto;
+      width: 300px;
+      height: 300px;
+      margin-bottom: 1.5rem;
+    }
+
+    .textWrapper {
+      .teamName {
+        font-size: 2rem;
+      }
+
+      .teamPosition {
+        font-size: 1.2rem;
+      }
+
+      .teamDescription {
+        font-size: 1.1rem;
+      }
+    }
   }
 
-  .imageWrapper {
-    height: 200px; /* Adjusted height for smaller screens */
-    width: 200px; /* Adjusted width for smaller screens */
+  .teamMember .imageWrapper {
+    height: 200px;
   }
 }

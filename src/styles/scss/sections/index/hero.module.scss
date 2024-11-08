@@ -1,3 +1,4 @@
+// Base Section Styling
 .section {
   height: 100vh;
   width: 100%;
@@ -6,8 +7,16 @@
   align-items: center;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(45deg, #1b1b1b, #000);  // Slight gradient for depth
+  background: #141414; /* Dark background for architectural elegance */
+  text-align: center;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  perspective: 1800px; /* More intense 3D effect */
+  cursor: pointer; /* Interactive cursor */
 
+  // Background Image Wrapper with subtle movement
   .heroBackgroundWrapper {
     position: absolute;
     top: 0;
@@ -15,147 +24,141 @@
     right: 0;
     bottom: 0;
     z-index: 1;
-    overflow: hidden;
-    pointer-events: none;  // Prevent accidental interaction
-  }
-
-  // Apply transition to all images with a zoom and opacity effect
-  .heroBackground {
-    transition: opacity 2s ease-in-out, filter 2s ease-in-out, transform 10s ease-in-out;
-    opacity: 1;
-    filter: blur(0px);
-    transform: scale(1);
-    will-change: opacity, filter, transform;  // Improve performance for animations
-  }
-
-  .activeImage {
-    opacity: 1;
-    transform: scale(1.08);  // Slight zoom effect
-    transition: opacity 2s ease-in-out, filter 2s ease-in-out, transform 10s ease-in-out;
-  }
-
-  .transitionEffect {
-    opacity: 0;
-    filter: blur(25px);
-    transform: scale(1.15);
-  }
-
-  .heroBackgroundContainer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s ease-out, filter 1s ease-out; /* Smoother transitions */
+    will-change: transform, filter;
+    object-fit: cover; /* Ensures background image fills container */
+    animation: fluidRipple 3s infinite alternate ease-in-out; /* Smooth ripple animation */
+    filter: brightness(0.7); /* Slightly lighter background for more contrast */
   }
 
   .contentWrapper {
     position: relative;
     z-index: 2;
-    text-align: center;
-    color: white;
-    padding: 2rem;
-    max-width: 90%;  // For smaller screens
+    padding: 4rem 2rem;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease forwards; /* Smooth fade in effect */
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    transform-style: preserve-3d; /* Enable 3D effect */
+    transform: scale(1);
+    transition: transform 0.4s ease-out, opacity 0.5s ease; /* Smooth scaling & opacity transitions */
+    
+    &:hover {
+      transform: scale(1.07) rotate(3deg); /* Slight scale and rotation on hover */
+      opacity: 1;
+    }
   }
 
+  // Title and Subtitle Styling
   .title {
-    font-size: clamp(2.5rem, 5vw, 4rem);  // Responsive font size
-    font-weight: 700;
-    margin-bottom: 1rem;
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 800;
+    letter-spacing: 1px;
     opacity: 0;
-    animation: fadeInUp 1.5s forwards 0.5s;  // Slightly faster and delayed for synchronization
-    color: #f8f8f8;
+    animation: fadeInUp 1.5s ease forwards 0.3s;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.1;
   }
 
   .subtitle {
-    font-size: clamp(1rem, 2.5vw, 1.8rem);  // Responsive
-    margin-bottom: 2rem;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-weight: 300;
     opacity: 0;
-    animation: fadeInUp 2.5s forwards 1s;
-    color: #dddddd;
+    animation: fadeInUp 1.5s ease forwards 0.6s;
+    color: #aaa;
+    margin-top: 1.5rem;
+    line-height: 1.4;
   }
 
-  .ctaButton {
-    padding: 0.75rem 1.5rem;
-    font-size: 1.1rem;
-    color: white;
-    background-color: #333;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    opacity: 0;
-    animation: fadeInUp 3.5s forwards 1.5s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-    &:hover {
-      background-color: #555;
-      transform: scale(1.05);  // Scale up slightly on hover
+  // Ripple Animation for Background (Smoother and faster)
+  @keyframes fluidRipple {
+    0% {
+      transform: scale(1) translateY(0);
+    }
+    50% {
+      transform: scale(1.05) translateY(-8px);
+    }
+    100% {
+      transform: scale(1.1) translateY(0);
     }
   }
 
   @keyframes fadeInUp {
     from {
-      transform: translateY(30px);
       opacity: 0;
+      transform: translateY(30px);
     }
     to {
-      transform: translateY(0);
       opacity: 1;
+      transform: translateY(0);
     }
   }
 
-  .blocksContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    z-index: 2;
+  // Parallax Effect (Interactive Background Movement)
+  .heroBackgroundWrapper:hover {
+    transform: scale(1.08) translateZ(-50px); /* Subtle zoom-in effect when hovering */
+    filter: brightness(0.85); /* Slightly brighten the background */
   }
 
-  .block {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    background-color: #444;
+  // Interactive 3D Movement on Mouse Hover
+  .section:hover .heroBackgroundWrapper {
+    animation: none; /* Disable ripple animation when hovering */
+    transform: scale(1.05) rotate(2deg); /* Interactive background movement */
+    filter: brightness(0.8); /* Slight darkening to improve visibility of content */
+  }
+
+  // CTA Button Styling with subtle interactive effect
+  .ctaButton {
+    margin-top: 2rem;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    border-radius: 5px;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 
     &:hover {
-      transform: scale(1.05);
+      background: #fff;
+      color: #141414;
+      transform: translateY(-6px) scale(1.1); /* Smooth scale with hover effect */
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px #ff6600; /* Focused outline with accent color */
     }
   }
 
-  .blockBackground {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    object-fit: cover;
-    filter: brightness(0.7);
-  }
+  // Responsive Design for Mobile and Tablets
+  @media (max-width: 768px) {
+    .section {
+      padding: 2rem 1rem;
+    }
 
-  .blockContent {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: white;
-    z-index: 2;
+    .contentWrapper {
+      padding: 2rem 1rem;
+    }
 
-    h2 {
+    .title {
+      font-size: clamp(2.5rem, 7vw, 4rem);
+    }
+
+    .subtitle {
+      font-size: clamp(1rem, 5vw, 1.4rem);
+    }
+
+    .ctaButton {
       font-size: 1rem;
-      margin: 0;
+      padding: 0.8rem 2rem;
     }
-
-    .blockDescription {
-      font-size: 0.8rem;
-    }
-  }
-
-  .expanded {
-    width: 300px;
-    height: 300px;
-    transition: width 0.3s ease, height 0.3s ease;
   }
 }

@@ -1,328 +1,210 @@
-
-@import '../../mixins';
-
-.hasBg {
-	border-bottom: 1px solid var(--primary-dark);
-}
-
-.project {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	user-select: none;
-
-	border-radius: 2rem;
-	background-color: var(--background-dim2);
-    border: 1px solid var(--primary-dark);
-
-	.viewProject svg {
-		@include transition;
-	}
-
-	&:nth-of-type(2n) {
-		flex-direction: row-reverse;
-	}
-
-	&:hover {
-		cursor: pointer;
-
-		.viewProject svg {
-			@include transition;
-			color: var(--neon-1-1);
-		}
-	}
-}
-
-
-.projectHeader  {
-	display: flex;
-	flex-direction: column;
-	gap: var(--size-3x);
-
-	p {
-		font-size: 1.75rem;
-		line-height: 1.2;
-
-		strong {
-			color: var(--primary-bright);
-		}
-	}
-
-	.viewProject {
-		svg {
-			height: 1.5rem;
-			color: var(--primary);	
-		}
-	}
-
-	.header {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		gap: 2rem;
-
-		a {
-			flex-grow: 0;
-			flex-shrink: 1;
-		}
-
-		.privateOr {
-			flex-grow: 0;
-			flex-shrink: 1;
-			height: fit-content;
-		}
-	}
-
-}
-
-.details {
-	display: flex;
-	flex-direction: column;
-	flex-grow: 0;
-	flex-shrink: 1;
-	gap: var(--size-3x);
-	overflow: hidden;
-
-	padding: 2rem;
-
-	h3 {
-		position: relative;
-	}
-
-	h4 {
-		margin-bottom: var(--size-1x);
-	}
-
-	ul {
-		z-index: 2;
-	}
-
-	img {
-		display: none;
-	}
-}
-
-.imageContainer {
-	z-index: 3;
-	position: relative;
-	display: block;
-	width: 50%;
-	border-radius: 1rem;
-	flex-grow: 1;
-	flex-shrink: 0;
-
-	.imageAnimationContainer {
-		position: absolute;
-		overflow: hidden;
-		border-radius: 2rem;
-		height: calc(100% - 6rem);
-		width: calc(100% + 1rem);
-		right: 0;
-		bottom: 0;
-
-
-		> div > div {
-
-			> span {
-				position: absolute !important;
-				right: 4rem;
-	
-				img {
-					width: calc(556px / 1.25) !important;
-				}
-			}
-		}
-	}
-}
-
-.privateOr {
-	display: flex;
-	flex-direction: row;
-	gap: .35rem;
-	align-items: center;
-	max-width: fit-content;
-	font-size: .7rem;
-	font-weight: 400;
-	font-family: var(--font-accent);
-	color: var(--primary-dim);
-	padding: .125rem .5rem;
-	border-radius: 99rem;
-	border: 1px solid var(--primary-dark);
-	background: var(--primary-dark);
-}
-
-.bgContainer {
-	--opacity: 10%;
-
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	z-index: -2;
-	width: 100%;
-	height: 500px;
-
-	.afterGlowBg {
-		position: absolute;
-		z-index: -2;
-		top: -50%;
-		right: 0px;
-		height: 1000px;
-		width: 500px;
-		transform: translateX(50%);
-		filter: blur(200px);
-		opacity: var(--opacity);
-		// background: linear-gradient(180deg, rgb(41, 212, 112) 0%,  rgb(242, 240, 79) 100% );	
-		background: linear-gradient(180deg, var(--neon-1-1) 0%,  var(--neon-1-2) 100% );	
-	}
-
-	.orbitalBg {
-		// --left: linear-gradient(180deg, rgb(51, 205, 229) 0%,  rgb(229, 51, 140) 100% );
-		// --center: linear-gradient(180deg, rgb(41, 212, 112) 0%,  rgb(242, 240, 79) 100% );
-		// --right: linear-gradient(180deg, rgb(78, 21, 115) 0%,  rgb(103, 242, 79) 100% );
-		--left: linear-gradient(180deg, var(--neon-2-1) 0%,  var(--neon-2-2) 100% );
-		--center: linear-gradient(180deg, var(--neon-1-1) 0%,  var(--neon-1-2) 100% );
-		--right: linear-gradient(180deg, var(--neon-2-2) 0%,  var(--neon-1-1) 100% );
-		
-		position: absolute;
-		z-index: -1;
-		width: 100%;
-		left: -50%;
-	
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		gap: 2rem;
-		
-		height: 500px;
-	
-		filter: blur(200px);
-	
-		animation: rotationFore 240s linear infinite;
-		transform-origin: center center;
-		
-	
-		.bgSection {
-			position: relative;
-			width: calc(100% / 3 - 2rem);
-			aspect-ratio: 1;
-			height: 100%;
-		}
-	
-		.bgInner {
-			height: 100%;
-			width: 100%;
-			display: block;
-			border-radius: 99rem;
-		}
-
-		.heroOrbital {
-			height: 200%;
-			top: 50%;
-			transform: translateY(-50%);
-		}
-	
-		.heroLeft {
-			position: absolute;
-			left: -50%;
-			background: var(--left);
-			opacity: calc(var(--opacity) + 15%);
-		}
-		.heroCenter {
-			background: var(--center);
-			opacity: var(--opacity);
-		}
-		.heroRight {
-			position: absolute;
-			right: -50%;
-			background: var(--right);
-			opacity: calc(var(--opacity) + 15%);
-		}
-	
-	
-		@keyframes rotationFore {
-			0% {
-				transform: rotate(0deg);
-			}
-			100% {
-				transform: rotate(360deg);
-			}
-		} 
-	}
-}
-
-@include media($max: $mobile) {
-	.project {
-		&:nth-of-type(n) {
-			flex-direction: column;
-
-			&:hover {
-				.details {
-					border-color: var(--primary-dim2);
-				}
-			}
-
-			.details {
-				border-radius: 1rem;
-				padding: var(--size-2x);
-			}
-
-			.stackContainer {
-				--padding-top: 1.5rem;
-
-				h4 { 
-					text-align: center;
-					display: none;
-				}
-				ul {
-					font-size: .6rem;
-				}
-			}
-
-			.imageContainer {
-				height: 100px;
-				width: 100%;
-			}
-
-			.imageAnimationContainer {
-				height: calc(100% + 6rem);
-				width: 100%;
-		
-				> div > div {
-					> span {
-						img {
-							width: calc(556px / 2) !important;
-						}
-					}
-				}
-			}
-		}
-
-		&:nth-of-type(2n+1) {
-			.imageAnimationContainer {
-				> div > div {
-					> span {
-						right: 2rem;
-					}
-				}
-			}
-		}
-
-		&:nth-of-type(2n) {
-			.imageAnimationContainer {
-				> div > div {
-					> span {
-						right: 0rem;
-					}
-				}
-			}
-		}
-	}
-	
-	.bgContainer {
-		.orbitalBg {
-			width: unset;
-			height: 100%;
-		}
-	}
-}
-
+/* Main container for the Featured Projects section */
+.featuredProjects {
+    padding: 60px 0; /* Adds padding around the section */
+    margin-top: 80px; /* Adjust this value to create space for the fixed navbar */
+    
+    /* Section Title styles */
+    .sectionTitle {
+      margin-bottom: 40px; /* Adds space below the entire section title container */
+  
+      .preTitle {
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 8px;
+      }
+  
+      .title {
+        font-size: 36px;
+        font-weight: 700;
+        color: #111;
+        margin-bottom: 10px; /* Optional: adjust if needed */
+      }
+  
+      .subTitle {
+        font-size: 20px;
+        color: #666;
+        margin-bottom: 40px; /* Adds space specifically after the subtitle */
+      }
+    }
+  
+    /* Grid of projects */
+    .projectsGrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px; /* Adds gap between the project cards */
+      margin-top: 20px; /* Space between subtitle and projects */
+    }
+  
+    /* Project card container */
+    .projectCard {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+  
+      &:hover {
+        transform: scale(1.05);
+      }
+  
+      .imageContainer {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+  
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+  
+        &:hover img {
+          transform: scale(1.1); /* Image zoom effect on hover */
+        }
+  
+        .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background: rgba(0, 0, 0, 0.5);
+          opacity: 0;
+          transition: opacity 0.3s ease;
+  
+          h3 {
+            font-size: 22px;
+            color: white;
+            margin-bottom: 15px;
+          }
+  
+          button {
+            padding: 10px 20px;
+            background-color: #f79c42;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+  
+            &:hover {
+              background-color: #e68930;
+            }
+          }
+        }
+  
+        &:hover .overlay {
+          opacity: 1;
+        }
+      }
+    }
+  
+    /* Modal styles */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+  
+      &.show {
+        opacity: 1;
+        pointer-events: all;
+      }
+  
+      .modalContent {
+        background-color: #fff;
+        padding: 40px;
+        max-width: 800px;
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  
+        h2 {
+          font-size: 32px;
+          color: #333;
+          margin-bottom: 20px;
+        }
+  
+        p {
+          font-size: 16px;
+          color: #666;
+          margin-bottom: 30px;
+        }
+  
+        .modalImage {
+          img {
+            width: 100%;
+            border-radius: 8px;
+          }
+        }
+  
+        .thumbnailGallery {
+          display: flex;
+          gap: 10px;
+          margin-top: 20px;
+  
+          img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 5px;
+            cursor: pointer;
+            opacity: 0.6;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+  
+            &.activeThumbnail {
+              opacity: 1;
+              transform: scale(1.1);
+            }
+  
+            &:hover {
+              opacity: 1;
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+  
+      .closeButton {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+  
+        &:hover {
+          color: #f79c42;
+        }
+      }
+    }
+  
+    /* Add space below modal content */
+    .modalContent {
+      padding-bottom: 40px; /* Adds space below modal content */
+    }
+  }
+  
+  /* Global styles for the modal when open */
+  body.modal-open {
+    overflow: hidden;
+  }
+  

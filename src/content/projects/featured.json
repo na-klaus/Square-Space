@@ -1,32 +1,24 @@
 [
     {
-        "project": "Baug-e-Suraiyya",
-        "url": "Located in Bhiwandi",
-        "repo": "Public",
-        "descriptionTitle": "Residential Complex in Bhiwandi",
-        "description": "Baug-e-Suraiyya is a premium residential project located in Bhiwandi, offering modern amenities and thoughtfully designed living spaces to elevate urban living.",
-        "imageOptions": [],
-        "images": [
-            { "key": "baug-e-suraiyya", "hover": "right", "h": "1200", "w": "800", "url": "/img/baug-e-suraiyya.png" }
-        ],
-        "stack": [
-            { "key": "architecture", "name": "Architecture", "type": "industry" },
-            { "key": "sustainability", "name": "Sustainability", "type": "industry" }
-        ]
+      "project": "Baug-e-Suraiyya",
+      "description": "A premium residential project located in Bhiwandi, showcasing a blend of traditional and contemporary architectural excellence.",
+      "images": [
+        { "url": "/images/baug-e-suraiyya/image1.jpg" },
+        { "url": "/images/baug-e-suraiyya/image2.jpg" },
+        { "url": "/images/baug-e-suraiyya/image3.jpg" },
+        { "url": "/images/baug-e-suraiyya/image4.jpg" },
+        { "url": "/images/baug-e-suraiyya/image5.jpg" }
+      ]
     },
     {
-        "project": "Millat Arcade",
-        "url": "Located in Kalyan",
-        "repo": "Public",
-        "descriptionTitle": "Commercial Complex in Kalyan",
-        "description": "Millat Arcade is a modern commercial project situated in Kalyan, designed to provide businesses with state-of-the-art facilities and an ideal environment for growth.",
-        "imageOptions": [],
-        "images": [
-            { "key": "millat-arcade", "hover": "left", "h": "1200", "w": "800", "url": "/img/millat-arcade.png" }
-        ],
-        "stack": [
-            { "key": "construction", "name": "Construction", "type": "industry" },
-            { "key": "innovation", "name": "Innovation", "type": "industry" }
-        ]
+      "project": "Millat Arcade",
+      "description": "A commercial complex redefining urban convenience and style.",
+      "images": [
+        { "url": "/images/millat-arcade/image1.jpg" },
+        { "url": "/images/millat-arcade/image2.jpg" },
+        { "url": "/images/millat-arcade/image3.jpg" },
+        { "url": "/images/millat-arcade/image4.jpg" },
+        { "url": "/images/millat-arcade/image5.jpg" }
+      ]
     }
-]
+  ]

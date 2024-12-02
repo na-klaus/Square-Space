@@ -1,34 +1,27 @@
 [
-  
   {
-    "name": "Ar Elaf Ansari",
+    "name": "Elaf Ansari",
     "position": "Principle Architect",
     "image": "/img/team3.png",
-    "description": "Expert in 2D planning and drafting, ensuring precision and creativity in every project."
+    "description": "Elaf Ansari combines creativity with precision in architecture, excelling in managing construction documents, approvals, permits, and compliance to ensure smooth project execution."
   },
   {
-    "name": "Ar Riyaz Ansari",
+    "name": "Riayz Ansari",
     "position": "Principle Architect",
     "image": "/img/team1.jpg",
-    "description": "Passionate about sustainable design, bringing innovative architectural solutions to life."
+    "description": "Riayz Ansari bridges design and execution, bringing architectural plans to life on-site with precision and leadership, coordinating with contractors and engineers throughout construction."
   },
   {
     "name": "AR MOHAMMED UMAR ANSARI (@rtist)",
     "position": "",
     "image": "/img/team4.jpg",
-    "description": "A visionary architect, planner, and 3D artist, transforming interiors into breathtaking works of art where functionality meets inspired design."
+    "description": "A visionary architect, planner, and 3D artist, transforming interiors into functional and inspired works of art."
   },
   {
-    "name": "Ubada Momin",
-    "position": "Interior Designer",
-    "image": "/img/team2.jpg",
-    "description": "Skilled in drafting detailed designs, turning creative ideas into structured plans with accuracy."
-  },
-  {
-    "name": "Siddhart",
+    "name": "Siddhart Kadam",
     "position": "Liaisoning Head",
     "image": "/img/team9.jpg",
-    "description": "Navigating the complexities of regulations to ensure smooth project approvals and compliance."
+    "description": "Siddhart Kadam is skilled in managing regulations and approvals, ensuring smooth project compliance and coordination across all stages."
   },
   {
     "name": "Tausif Ansari",

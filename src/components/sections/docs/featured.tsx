@@ -31,9 +31,9 @@ export default function Recent() {
                         </div>
                         <div className={css.textWrapper}>
                             <h3 className={css.teamName}>Arshad Ansari</h3>
-                            <p className={css.teamPosition}>CEO AND FOUNDER</p>
+                            <p className={css.teamPosition}>DIRECTOR</p>
                             <p className={css.teamDescription}>
-                            Arshad Ansari is the visionary Owner and CEO of Square Space, an industry leader in architectural and engineering consulting. With a keen eye for detail and a commitment to innovation, Arshad has steered Square Space towards delivering comprehensive solutions that encompass legal consulting, structured planning, interior design, liaisoning, and NOC permissions. His dedication to excellence has established Square Space as a trusted name in the field.
+                                Arshad Ansari, Director, excels at navigating regulatory complexities and managing architectural projects. With deep expertise in securing building permits, zoning, and compliance, they ensure every project progresses seamlessly from start to finish. Known for forging strong relationships with stakeholders and guiding teams through challenges, Arshad leads the firm with vision and strategic foresight, ensuring both innovation and excellence.
                             </p>
                         </div>
                     </article>

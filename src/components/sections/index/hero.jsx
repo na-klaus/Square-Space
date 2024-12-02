@@ -20,31 +20,59 @@ export default function Hero() {
     '/images/photo14.jpg',
     '/images/photo15.jpg',
   ];
-  const [backgroundIndex, setBackgroundIndex] = useState(0);
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [fade, setFade] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    // Automatically change background every 5 seconds
+    // Change background image every 5 seconds with a fade transition
     const intervalId = setInterval(() => {
-      setBackgroundIndex((prevIndex) => (prevIndex + 1) % backgrounds.length);
+      setFade(true); // Trigger fade-out
+      setTimeout(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % backgrounds.length);
+        setFade(false); // Trigger fade-in after the image changes
+      }, 500); // Match CSS animation duration
     }, 5000);
-    return () => clearInterval(intervalId); // Clear interval on component unmount
+
+    return () => clearInterval(intervalId); // Cleanup interval on component unmount
   }, []);
 
+  // Track mouse movement for parallax effect
+  const handleMouseMove = (e) => {
+    const { clientX, clientY } = e;
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
+
+    const moveX = (clientX - centerX) / 50; // Adjust movement intensity
+    const moveY = (clientY - centerY) / 50;
+
+    setMousePosition({ x: moveX, y: moveY });
+  };
+
   return (
-    <Section classProp={hero.section}>
-      {/* Background Image with Transition */}
+    <Section classProp={hero.section} onMouseMove={handleMouseMove}>
+      {/* Background Image */}
       <div
-        className={hero.heroBackgroundWrapper}
+        className={`${hero.heroBackgroundWrapper} ${fade ? hero.fade : ''}`}
         style={{
-          backgroundImage: `url(${backgrounds[backgroundIndex]})`,
-          transform: 'scale(1.1)',
+          backgroundImage: `url(${backgrounds[currentIndex]})`,
+          transform: `translate(${mousePosition.x}px, ${mousePosition.y}px) scale(1.1)`,
         }}
       ></div>
 
-      {/* Content Wrapper with Fade-In Animation */}
-      <div className={hero.contentWrapper}>
-        <h1 className={hero.title}>Welcome to Square Space</h1>
-        <p className={hero.subtitle}>Architectural Innovation for a Better Tomorrow</p>
+      {/* Content Section */}
+      <div
+        className={hero.contentWrapper}
+        style={{
+          transform: `rotateX(${mousePosition.y / 2}deg) rotateY(${mousePosition.x / 2}deg)`,
+        }}
+      >
+        <h1 className={hero.title}>Innovate Your Space</h1>
+        <p className={hero.subtitle}>
+          Transforming ideas into reality with architectural brilliance.
+        </p>
+        <button className={hero.ctaButton}>Explore More</button>
       </div>
     </Section>
   );

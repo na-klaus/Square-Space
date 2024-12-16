@@ -10,21 +10,24 @@ export default function FeaturedProjects() {
     const [activeImageIndex, setActiveImageIndex] = useState(0);
 
     const handleViewDetails = (index) => {
-        setSelectedProject(index);
-        setActiveImageIndex(0); // Reset to first image
-        document.body.classList.add('modal-open'); // Prevent background scroll
+        console.log("Learn More clicked for project:", index); // Debug log
+        setSelectedProject(index); // Open modal and set project
+        setActiveImageIndex(0); // Reset to first image in modal
+        document.body.classList.add(css.modalOpen); // Prevent background scrolling
     };
 
     const closeModal = () => {
-        setSelectedProject(null);
-        document.body.classList.remove('modal-open'); // Re-enable background scroll
+        console.log("Closing modal"); // Debug log
+        setSelectedProject(null); // Close modal
+        document.body.classList.remove(css.modalOpen); // Re-enable background scrolling
     };
 
     const handleImageClick = (index) => {
-        setActiveImageIndex(index);
+        setActiveImageIndex(index); // Change active image in modal
     };
 
     useEffect(() => {
+        // Animate project cards when they come into view
         const projectCards = document.querySelectorAll(`.${css.projectCard}`);
         const observer = new IntersectionObserver(
             (entries) => {
@@ -36,7 +39,9 @@ export default function FeaturedProjects() {
             },
             { threshold: 0.5 }
         );
+
         projectCards.forEach((card) => observer.observe(card));
+
         return () => observer.disconnect();
     }, []);
 
@@ -48,6 +53,7 @@ export default function FeaturedProjects() {
                     preTitle="Our Work"
                     subTitle="Innovative and sustainable designs, inspired by architectural excellence."
                 />
+                {/* Project Grid */}
                 <div className={css.projectsGrid}>
                     {content.map((data, index) => (
                         <div key={index} className={css.projectCard}>
@@ -61,12 +67,15 @@ export default function FeaturedProjects() {
                         </div>
                     ))}
                 </div>
+
+                {/* Modal */}
                 {selectedProject !== null && (
-                    <div className={css.modal}>
-                        <button className={css.closeButton} onClick={closeModal}>
-                            &times;
-                        </button>
+                    <div className={`${css.modal} ${selectedProject !== null ? css.show : ''}`}>
+                        <div className={css.modalOverlay} onClick={closeModal}></div>
                         <div className={css.modalContent}>
+                            <button className={css.closeButton} onClick={closeModal}>
+                                &times;
+                            </button>
                             <h2>{content[selectedProject].project}</h2>
                             <p>{content[selectedProject].description}</p>
                             <div className={css.modalImage}>

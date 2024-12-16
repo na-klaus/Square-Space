@@ -1,210 +1,240 @@
 /* Main container for the Featured Projects section */
 .featuredProjects {
-    padding: 60px 0; /* Adds padding around the section */
-    margin-top: 80px; /* Adjust this value to create space for the fixed navbar */
-    
-    /* Section Title styles */
-    .sectionTitle {
-      margin-bottom: 40px; /* Adds space below the entire section title container */
+  padding: 60px 0; /* Adds padding around the section */
+  margin-top: 80px; /* Adjust this value to create space for the fixed navbar */
   
-      .preTitle {
-        font-size: 18px;
-        font-weight: 600;
-        color: #333;
-        margin-bottom: 8px;
-      }
-  
-      .title {
-        font-size: 36px;
-        font-weight: 700;
-        color: #111;
-        margin-bottom: 10px; /* Optional: adjust if needed */
-      }
-  
-      .subTitle {
-        font-size: 20px;
-        color: #666;
-        margin-bottom: 40px; /* Adds space specifically after the subtitle */
-      }
+  /* Section Title styles */
+  .sectionTitle {
+    margin-bottom: 40px; /* Adds space below the entire section title container */
+
+    .preTitle {
+      font-size: 18px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 8px;
     }
-  
-    /* Grid of projects */
-    .projectsGrid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px; /* Adds gap between the project cards */
-      margin-top: 20px; /* Space between subtitle and projects */
+
+    .title {
+      font-size: 36px;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 10px; /* Optional: adjust if needed */
     }
-  
-    /* Project card container */
-    .projectCard {
+
+    .subTitle {
+      font-size: 20px;
+      color: #666;
+      margin-bottom: 40px; /* Adds space specifically after the subtitle */
+    }
+  }
+
+  /* Grid of projects */
+  .projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; /* Adds gap between the project cards */
+    margin-top: 20px; /* Space between subtitle and projects */
+  }
+
+  /* Project card container */
+  .projectCard {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    .imageContainer {
       position: relative;
       overflow: hidden;
       border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-  
-      &:hover {
-        transform: scale(1.05);
-      }
-  
-      .imageContainer {
-        position: relative;
-        overflow: hidden;
-        border-radius: 8px;
-  
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          transition: transform 0.3s ease;
-        }
-  
-        &:hover img {
-          transform: scale(1.1); /* Image zoom effect on hover */
-        }
-  
-        .overlay {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          background: rgba(0, 0, 0, 0.5);
-          opacity: 0;
-          transition: opacity 0.3s ease;
-  
-          h3 {
-            font-size: 22px;
-            color: white;
-            margin-bottom: 15px;
-          }
-  
-          button {
-            padding: 10px 20px;
-            background-color: #f79c42;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
-  
-            &:hover {
-              background-color: #e68930;
-            }
-          }
-        }
-  
-        &:hover .overlay {
-          opacity: 1;
-        }
-      }
-    }
-  
-    /* Modal styles */
-    .modal {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-  
-      &.show {
-        opacity: 1;
-        pointer-events: all;
-      }
-  
-      .modalContent {
-        background-color: #fff;
-        padding: 40px;
-        max-width: 800px;
+
+      img {
         width: 100%;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  
-        h2 {
-          font-size: 32px;
-          color: #333;
-          margin-bottom: 20px;
-        }
-  
-        p {
-          font-size: 16px;
-          color: #666;
-          margin-bottom: 30px;
-        }
-  
-        .modalImage {
-          img {
-            width: 100%;
-            border-radius: 8px;
-          }
-        }
-  
-        .thumbnailGallery {
-          display: flex;
-          gap: 10px;
-          margin-top: 20px;
-  
-          img {
-            width: 60px;
-            height: 60px;
-            object-fit: cover;
-            border-radius: 5px;
-            cursor: pointer;
-            opacity: 0.6;
-            transition: opacity 0.3s ease, transform 0.3s ease;
-  
-            &.activeThumbnail {
-              opacity: 1;
-              transform: scale(1.1);
-            }
-  
-            &:hover {
-              opacity: 1;
-              transform: scale(1.1);
-            }
-          }
-        }
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
       }
-  
-      .closeButton {
+
+      &:hover img {
+        transform: scale(1.1); /* Image zoom effect on hover */
+      }
+
+      .overlay {
         position: absolute;
-        top: 20px;
-        right: 20px;
-        background: none;
-        border: none;
-        font-size: 30px;
-        color: white;
-        cursor: pointer;
-  
-        &:hover {
-          color: #f79c42;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+
+        h3 {
+          font-size: 22px;
+          color: white;
+          margin-bottom: 15px;
+        }
+
+        button {
+          padding: 10px 20px;
+          background-color: #f79c42;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: #e68930;
+          }
         }
       }
-    }
-  
-    /* Add space below modal content */
-    .modalContent {
-      padding-bottom: 40px; /* Adds space below modal content */
+
+      &:hover .overlay {
+        opacity: 1;
+      }
     }
   }
-  
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+
+    &.show {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .modalContent {
+      background-color: #fff;
+      padding: 40px;
+      max-width: 800px;
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      position: relative; /* Ensures close button is aligned within this container */
+
+      h2 {
+        font-size: 32px;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 30px;
+      }
+
+      .modalImage {
+        img {
+          width: 100%;
+          border-radius: 8px;
+        }
+      }
+
+      .thumbnailGallery {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+
+        img {
+          width: 60px;
+          height: 60px;
+          object-fit: cover;
+          border-radius: 5px;
+          cursor: pointer;
+          opacity: 0.6;
+          transition: opacity 0.3s ease, transform 0.3s ease;
+
+          &.activeThumbnail {
+            opacity: 1;
+            transform: scale(1.1);
+          }
+
+          &:hover {
+            opacity: 1;
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      /* Close button styles */
+      .closeButton {
+        position: absolute;
+        top: 15px;
+        right: 15px; /* Aligns properly within the modal */
+        background: #333; /* Dark background for dark mode */
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+
+        /* Animation for smooth appearance */
+        animation: fadeIn 0.5s ease-out;
+
+        &:hover {
+          background: #555; /* Darker shade on hover */
+          transform: scale(1.1); /* Slightly enlarge on hover */
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+        }
+
+        &:active {
+          transform: scale(0.9); /* Slightly shrink on click */
+          box-shadow: none; /* Remove shadow when clicked */
+        }
+
+        &::before {
+          content: '✕'; /* Unicode for close icon */
+          font-size: 20px;
+          line-height: 1;
+        }
+      }
+    }
+  }
+
   /* Global styles for the modal when open */
   body.modal-open {
     overflow: hidden;
   }
-  
+}
+
+/* Keyframe animation for the close button */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8); /* Starts smaller */
+  }
+  to {
+    opacity: 1;
+    transform: scale(1); /* Ends at normal size */
+  }
+}

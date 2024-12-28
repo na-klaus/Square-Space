@@ -2,33 +2,33 @@ const SEO = {
   title: "Square Space | Architecture & Engineering Consulting",
   description:
     "Square Space is an architecture and engineering consulting firm offering structured planning, interior design, NOC permissions, and legal consulting. Our expert services ensure quality, compliance, and innovative solutions.",
-  canonical: "https://www.square-space.in/", // The URL of your website
+  canonical: "https://www.square-space.in/",
 
   openGraph: {
-    url: "https://www.square-space.in/", // Open Graph URL (usually the homepage URL)
+    url: "https://www.square-space.in/",
     title: "Square Space | Architecture & Engineering Consulting",
     description:
       "Square Space offers innovative architectural and engineering consulting services, including structured planning, interior design, NOC permissions, and legal consulting.",
     images: [
       {
-        url: "https://www.square-space.in/images/hero-image.jpg", // Replace with your hero image URL
+        url: "https://www.square-space.in/images/hero-image.jpg",
         width: 1200,
         height: 630,
         alt: "Square Space Architecture",
-        type: "image/jpeg", // Image type for the platform
+        type: "image/jpeg",
       },
     ],
     site_name: "Square Space",
     profile: {
-      username: "", // No Instagram or Twitter username
+      username: "square_space_architect", // Updated Instagram handle
     },
-    locale: "en_US", // Language and region for the Open Graph metadata
+    locale: "en_US",
   },
 
   twitter: {
-    handle: "", // No Twitter handle
-    site: "", // No Twitter site handle
-    cardType: "summary_large_image", // The type of Twitter Card to display (summary with large image)
+    handle: "@square_space_ar", // Updated Twitter handle
+    site: "@square_space_ar", // Updated Twitter site handle
+    cardType: "summary_large_image",
   },
 
   // Additional Meta Tags for SEO
@@ -36,27 +36,27 @@ const SEO = {
     {
       property: "keywords",
       content:
-        "architecture, engineering, consulting, interior design, NOC permissions, structured planning, legal consulting, innovative solutions, construction, sustainable design, urban planning", // Add relevant keywords
+        "architecture, engineering, consulting, interior design, NOC permissions, structured planning, legal consulting, innovative solutions, construction, sustainable design, urban planning",
     },
     {
       property: "robots",
-      content: "index, follow", // Tells search engines to index the page
+      content: "index, follow",
     },
     {
       property: "author",
-      content: "Square Space", // Author of the website or content
+      content: "Square Space",
     },
     {
       property: "og:image:alt",
-      content: "Square Space Architecture Hero Image", // Alt text for Open Graph image
+      content: "Square Space Architecture Hero Image",
     },
     {
       property: "og:type",
-      content: "website", // Can also be "article" or "business" depending on the content
+      content: "website",
     },
     {
       name: "twitter:image",
-      content: "https://www.square-space.in/images/hero-image.jpg", // Image URL for Twitter card
+      content: "https://www.square-space.in/images/hero-image.jpg",
     },
     {
       name: "twitter:description",
@@ -69,21 +69,21 @@ const SEO = {
     },
     {
       name: "viewport",
-      content: "width=device-width, initial-scale=1.0", // Ensures the website is responsive
+      content: "width=device-width, initial-scale=1.0",
     },
     {
       name: "robots",
-      content: "index, follow", // Tells search engines to index the page and follow links
+      content: "index, follow",
     },
     {
       name: "language",
-      content: "en-US", // Specifies the content language
+      content: "en-US",
     },
   ],
 
   // Additional Custom Metadata Tags
   facebook: {
-    appId: "", // Optional: Include your Facebook App ID (for more granular analytics)
+    appId: "", // Optional: Include your Facebook App ID (if applicable)
   },
 
   // Structured Data (JSON-LD for SEO)
@@ -93,17 +93,18 @@ const SEO = {
       "@type": "Organization",
       name: "Square Space",
       url: "https://www.square-space.in/",
-      logo: "https://www.square-space.in/logo.jpg", // Replace with your logo URL
+      logo: "https://www.square-space.in/logo.jpg",
       contactPoint: {
         "@type": "ContactPoint",
-        telephone: "+91-9324555058", // Updated with your contact number
+        telephone: "+91-9324555058",
         contactType: "Customer Service",
-        areaServed: "IN", // Area served by your organization
+        areaServed: "IN",
         availableLanguage: "English",
       },
       sameAs: [
-        "https://www.instagram.com/_square_space__/#", // Instagram URL
-        "https://www.linkedin.com/company/square-space-1/?viewAsMember=true", // LinkedIn URL
+        "https://www.instagram.com/square_space_architect/", // Updated Instagram URL
+        "https://x.com/square_space_ar", // Updated Twitter URL
+        "https://www.linkedin.com/company/square-space-1/?viewAsMember=true",
       ],
     },
     {
@@ -121,8 +122,8 @@ const SEO = {
 
   // Sitemap Configuration (optional)
   sitemap: {
-    hostname: "https://www.square-space.in", // Your website's hostname
-    generateRobotsTxt: true, // If true, generates a robots.txt file automatically
+    hostname: "https://www.square-space.in",
+    generateRobotsTxt: true,
   },
 };
 

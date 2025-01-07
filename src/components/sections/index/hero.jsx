@@ -72,7 +72,7 @@ export default function Hero() {
         <p className={hero.subtitle}>
           Transforming ideas into reality with architectural brilliance.
         </p>
-        <button className={hero.ctaButton}>Explore More</button>
+        
       </div>
     </Section>
   );

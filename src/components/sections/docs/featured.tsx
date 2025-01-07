@@ -16,7 +16,7 @@ export default function Recent() {
                     subTitle="The dedicated professionals driving our vision forward."
                 />
 
-                {/* CEO Section */}
+                {/* Director Section */}
                 <section className={css.ownerSection}>
                     <article className={css.owner}>
                         <div className={css.imageWrapper}>
@@ -32,9 +32,17 @@ export default function Recent() {
                         <div className={css.textWrapper}>
                             <h3 className={css.teamName}>Arshad Ansari</h3>
                             <p className={css.teamPosition}>DIRECTOR</p>
-                            <p className={css.teamDescription}>
-                                Arshad Ansari, Director, excels at navigating regulatory complexities and managing architectural projects. With deep expertise in securing building permits, zoning, and compliance, they ensure every project progresses seamlessly from start to finish. Known for forging strong relationships with stakeholders and guiding teams through challenges, Arshad leads the firm with vision and strategic foresight, ensuring both innovation and excellence.
-                            </p>
+                            <ul className={css.teamDescription}>
+                                <li>Excels at navigating regulatory complexities.</li>
+                                <li>Manages architectural projects seamlessly.</li>
+                                <li>Deep expertise in permits, zoning, and compliance.</li>
+                                <li>Guides teams with vision and foresight.</li>
+                            </ul>
+                            <div className={css.socialLinks}>
+                                <a href="https://wa.me/9324555058" target="_blank" rel="noopener noreferrer" className={css.socialButton}>WhatsApp</a>
+                                <a href="https://instagram.com/arshuansari" target="_blank" rel="noopener noreferrer" className={css.socialButton}>Instagram</a>
+                                <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" className={css.socialButton}>Facebook</a>
+                            </div>
                         </div>
                     </article>
                 </section>
@@ -51,8 +59,8 @@ export default function Recent() {
                                     <Image 
                                         src={image} 
                                         alt={`Image of ${name}`} 
-                                        height={250}  // Updated size
-                                        width={250}   // Updated size
+                                        height={250} 
+                                        width={250} 
                                         loading="eager" 
                                         className={css.teamImage} 
                                     />

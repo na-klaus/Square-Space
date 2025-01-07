@@ -1,24 +1,168 @@
 [
-    {
-      "project": "Baug-e-Suraiyya",
-      "description": "A premium residential project located in Bhiwandi, showcasing a blend of traditional and contemporary architectural excellence.",
-      "images": [
-        { "url": "/images/baug-e-suraiyya/image1.jpg" },
-        { "url": "/images/baug-e-suraiyya/image2.jpg" },
-        { "url": "/images/baug-e-suraiyya/image3.jpg" },
-        { "url": "/images/baug-e-suraiyya/image4.jpg" },
-        { "url": "/images/baug-e-suraiyya/image5.jpg" }
-      ]
-    },
-    {
-      "project": "Millat Arcade",
-      "description": "A commercial complex redefining urban convenience and style.",
-      "images": [
-        { "url": "/images/millat-arcade/image1.jpg" },
-        { "url": "/images/millat-arcade/image2.jpg" },
-        { "url": "/images/millat-arcade/image3.jpg" },
-        { "url": "/images/millat-arcade/image4.jpg" },
-        { "url": "/images/millat-arcade/image5.jpg" }
-      ]
-    }
-  ]
+  {
+    "project": "Baug-e-Suraiyya",
+    "description": "A premium residential project located in Bhiwandi, showcasing a blend of traditional and contemporary architectural excellence.",
+    "images": [
+      { "url": "/images/baug-e-suraiyya/image1.jpg" },
+      { "url": "/images/baug-e-suraiyya/image2.jpg" },
+      { "url": "/images/baug-e-suraiyya/image3.jpg" },
+      { "url": "/images/baug-e-suraiyya/image4.jpg" },
+      { "url": "/images/baug-e-suraiyya/image5.jpg" }
+    ]
+  },
+  {
+    "project": "Millat Arcade",
+    "description": "A commercial complex redefining urban convenience and style.",
+    "images": [
+      { "url": "/images/millat-arcade/image1.jpg" },
+      { "url": "/images/millat-arcade/image2.jpg" },
+      { "url": "/images/millat-arcade/image3.jpg" },
+      { "url": "/images/millat-arcade/image4.jpg" },
+      { "url": "/images/millat-arcade/image5.jpg" }
+    ]
+  },
+  {
+    "project": "22",
+    "description": "A residential space offering modern living with advanced amenities.",
+    "images": [
+      { "url": "/images/22/image1.jpg" },
+      { "url": "/images/22/image2.jpg" },
+      { "url": "/images/22/image3.jpg" },
+      { "url": "/images/22/image4.jpg" },
+      { "url": "/images/22/image5.jpg" }
+     
+      
+    
+    ]
+  },
+  {
+    "project": "Ariz",
+    "description": "A luxurious project epitomizing elegance and comfort.",
+    "images": [
+      { "url": "/images/ariz/image1.jpg" },
+      { "url": "/images/ariz/image2.jpg" },
+      { "url": "/images/ariz/image3.jpg" },
+      { "url": "/images/ariz/image4.jpg" },
+      { "url": "/images/ariz/image5.jpg" }
+ 
+    ]
+    
+  },
+  {
+    "project": "Godown",
+    "description": "A robust infrastructure catering to storage and logistics needs.",
+    "images": [
+      { "url": "/images/godown/image1.jpg" },
+      { "url": "/images/godown/image2.jpg" },
+      { "url": "/images/godown/image3.jpg" },
+      { "url": "/images/godown/image4.jpg" }
+    ]
+  },
+  {
+    "project": "Kalher 38",
+    "description": "A modern living space with premium facilities.",
+    "images": [
+      { "url": "/images/kalher 38/image1.jpg" },
+      { "url": "/images/kalher 38/image2.jpg" },
+      { "url": "/images/kalher 38/image3.jpg" },
+      { "url": "/images/kalher 38/image4.jpg" },
+      { "url": "/images/kalher 38/image5.jpg" }
+     
+    ]
+  },
+  {
+    "project": "Kalher 81",
+    "description": "An architectural marvel providing a luxurious lifestyle.",
+    "images": [
+      { "url": "/images/kalher 81/image1.jpg" },
+      { "url": "/images/kalher 81/image2.jpg" },
+      { "url": "/images/kalher 81/image3.jpg" },
+      { "url": "/images/kalher 81/image4.jpg" },
+      { "url": "/images/kalher 81/image5.jpg" }
+    
+    ]
+  },
+  {
+    "project": "Kalher 48",
+    "description": "A housing project balancing style and utility.",
+    "images": [
+      { "url": "/images/kalher 48/image1.jpg" },
+      { "url": "/images/kalher 48/image2.jpg" },
+      { "url": "/images/kalher 48/image3.jpg" },
+      { "url": "/images/kalher 48/image4.jpg" },
+      { "url": "/images/kalher 48/image5.jpg" }
+  
+    
+    ]
+  },
+  {
+    "project": "Kevani",
+    "description": "A unique project combining aesthetics and practicality.",
+    "images": [
+      { "url": "/images/kevani/image1.jpg" },
+      { "url": "/images/kevani/image2.jpg" },
+      { "url": "/images/kevani/image3.jpg" },
+      { "url": "/images/kevani/image4.jpg" },
+      { "url": "/images/kevani/image5.jpg" }
+    ]
+  },
+  {
+    "project": "lonad warehouse",
+    "description": "A state-of-the-art warehouse facility for industrial storage.",
+    "images": [
+      { "url": "/images/lonad warehouse/image1.jpg" },
+      { "url": "/images/lonad warehouse/image2.jpg" },
+      { "url": "/images/lonad warehouse/image3.jpg" },
+      { "url": "/images/lonad warehouse/image4.jpg" },
+      { "url": "/images/lonad warehouse/image5.jpg" }
+      
+    ]
+  },
+  {
+    "project": "Mahapoli Farmhouse",
+    "description": "A serene retreat offering a countryside lifestyle.",
+    "images": [
+      { "url": "/images/mahapoli farmhouse/image1.jpg" },
+      { "url": "/images/mahapoli farmhouse/image2.jpg" },
+      { "url": "/images/mahapoli farmhouse/image3.jpg" },
+      { "url": "/images/mahapoli farmhouse/image4.jpg" },
+      { "url": "/images/mahapoli farmhouse/image5.jpg" }
+    
+    ]
+  },
+  {
+    "project": "Mumtaz",
+    "description": "A heritage-inspired project with modern elements.",
+    "images": [
+      { "url": "/images/mumtaz/image1.jpg" },
+      { "url": "/images/mumtaz/image2.jpg" },
+      { "url": "/images/mumtaz/image3.jpg" },
+      { "url": "/images/mumtaz/image4.jpg" }
+    ]
+  },
+  {
+    "project": "Rajnoli",
+    "description": "A luxury residential project set in a picturesque location.",
+    "images": [
+      { "url": "/images/rajnoli/image1.jpg" },
+      { "url": "/images/rajnoli/image2.jpg" },
+      { "url": "/images/rajnoli/image3.jpg" },
+      { "url": "/images/rajnoli/image4.jpg" },
+      { "url": "/images/rajnoli/image5.jpg" }
+    
+      
+
+    ]
+  },
+  {
+    "project": "faraz",
+    "description": "An innovative development project with advanced features.",
+    "images": [
+      { "url": "/images/faraz/image1.jpg" },
+      { "url": "/images/faraz/image2.jpg" },
+      { "url": "/images/faraz/image3.jpg" },
+      { "url": "/images/faraz/image4.jpg" },
+      { "url": "/images/faraz/image5.jpg" }
+    ]
+  }
+]

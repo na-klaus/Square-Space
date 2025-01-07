@@ -1,98 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Architects+Daughter&display=swap');
+
 .section {
+  position: relative;
   height: 100vh;
+  overflow: hidden;
+}
+
+.heroBackgroundWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  z-index: -1;
+
+  &.fade {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+}
+
+.contentWrapper {
+  position: relative;
+  z-index: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
-  overflow: hidden;
-  background: #141414;
+  height: 100%;
   text-align: center;
-  color: #fff;
-  font-family: 'Montserrat', sans-serif;
+  perspective: 1000px;
+  transform-style: preserve-3d;
 
-  // Background styling with parallax and zoom effect
-  .heroBackgroundWrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    z-index: 1;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    filter: brightness(0.7);
-    will-change: transform, filter, opacity;
-    animation: subtleZoom 10s infinite alternate ease-in-out;
+  h1 {
+    font-size: 3.5rem;
+    font-family: 'Cormorant Garamond', serif; /* Elegant architectural font */
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typingTitle 3s steps(30, end);
   }
 
-  .fade {
-    opacity: 0; // Smooth fade-out
-  }
-
-  // Content with 3D effect
-  .contentWrapper {
-    position: relative;
-    z-index: 2;
+  p {
+    font-size: 1.5rem;
+    font-family: 'Architects Daughter', cursive; /* Hand-drawn architectural font */
+    color: #ddd;
+    margin-bottom: 2rem;
     max-width: 700px;
-    text-align: center;
-    transform-style: preserve-3d; // Enable 3D perspective
-    perspective: 1000px; // Add depth
-    transition: transform 0.3s ease, opacity 0.5s ease;
+    line-height: 1.5;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    animation: fadeInZoom 1s ease-out forwards;
+    animation-delay: 3.5s;
+  }
 
-    .title {
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      font-weight: 800;
-      color: #fff;
-      text-transform: uppercase;
-      animation: fadeInUp 1.5s ease 0.3s forwards;
-      opacity: 0;
-    }
+  .ctaButton {
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-family: 'Cormorant Garamond', serif;
+    color: #141414;
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 4s;
 
-    .subtitle {
-      font-size: clamp(1rem, 3vw, 1.5rem);
-      color: #aaa;
-      margin: 1rem 0 2rem;
-      animation: fadeInUp 1.5s ease 0.6s forwards;
-      opacity: 0;
-    }
-
-    .ctaButton {
-      padding: 1rem 2rem;
-      font-size: 1rem;
-      font-weight: 600;
-      color: #fff;
-      background: transparent;
-      border: 2px solid #fff;
-      border-radius: 5px;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      animation: fadeInUp 1.5s ease 0.9s forwards;
-      opacity: 0;
-
-      &:hover {
-        background: #fff;
-        color: #141414;
-        transform: translateY(-5px);
-        box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
-      }
+    &:hover {
+      transform: translateY(-5px);
+      background: #f5f5f5;
+      box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
     }
   }
 }
 
-// Subtle background zoom animation
-@keyframes subtleZoom {
-  0% {
-    transform: scale(1.05);
+/* Typing animation for h1 */
+@keyframes typingTitle {
+  from {
+    width: 0;
   }
-  100% {
-    transform: scale(1.1);
+  to {
+    width: 100%;
   }
 }
 
-// Content fade-in animation
+/* Fade-in with zoom effect for p */
+@keyframes fadeInZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Fade-in-up effect for button */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -104,18 +119,19 @@
   }
 }
 
-// Responsive adjustments
 @media (max-width: 768px) {
-  .section {
-    padding: 2rem;
+  .contentWrapper {
+    h1 {
+      font-size: 2.5rem;
+    }
 
-    .contentWrapper {
-      .title {
-        font-size: 2rem;
-      }
-      .subtitle {
-        font-size: 1rem;
-      }
+    p {
+      font-size: 1.2rem;
+    }
+
+    .ctaButton {
+      padding: 0.8rem 2rem;
+      font-size: 0.9rem;
     }
   }
 }

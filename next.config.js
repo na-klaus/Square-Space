@@ -1,6 +1,11 @@
+// next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	images: {
+	  domains: [
+		'images.unsplash.com',
+		// Add other domains if needed
+	  ],
 	  remotePatterns: [
 		{
 		  protocol: 'https',
@@ -24,13 +29,8 @@ const nextConfig = {
 		},
 		{
 		  protocol: 'https',
-		  hostname: 'raw.githubusercontent.com',
+		  hostname: 'github.com',
 		  pathname: '/Square-Space-Architects/square-space/**', // Updated path
-		},
-		{
-		  protocol: 'https',
-		  hostname: 'images.unsplash.com',
-		  pathname: '/**', // Assuming images are under this path
 		},
 	  ],
 	},
@@ -39,7 +39,6 @@ const nextConfig = {
 	experimental: {
 	  forceSwcTransforms: true, // Optional, verify if necessary
 	},
-  };
-  
-  module.exports = nextConfig;
-  
+};
+
+module.exports = nextConfig;

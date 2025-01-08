@@ -24,7 +24,7 @@ const nextConfig = {
 		},
 		{
 		  protocol: 'https',
-		  hostname: 'github.com',
+		  hostname: 'raw.githubusercontent.com',
 		  pathname: '/Square-Space-Architects/square-space/**', // Updated path
 		},
 		{
@@ -39,6 +39,7 @@ const nextConfig = {
 	experimental: {
 	  forceSwcTransforms: true, // Optional, verify if necessary
 	},
-};
-
-module.exports = nextConfig;
+  };
+  
+  module.exports = nextConfig;
+  

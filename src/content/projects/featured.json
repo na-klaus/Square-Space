@@ -59,19 +59,19 @@
     ]
   },
   {
-    "project": "Kalher 38",
+    "project": "38",
     "description": "A modern living space with premium facilities.",
     "images": [
-      { "url": "/images/kalher 38/image1.jpg" },
-      { "url": "/images/kalher 38/image2.jpg" },
-      { "url": "/images/kalher 38/image3.jpg" },
-      { "url": "/images/kalher 38/image4.jpg" },
-      { "url": "/images/kalher 38/image5.jpg" }
+      { "url": "/images/38/image1.jpg" },
+      { "url": "/images/38/image2.jpg" },
+      { "url": "/images/38/image3.jpg" },
+      { "url": "/images/38/image4.jpg" },
+      { "url": "/images/38/image5.jpg" }
      
     ]
   },
   {
-    "project": "Kalher 81",
+    "project": "81",
     "description": "An architectural marvel providing a luxurious lifestyle.",
     "images": [
       { "url": "/images/kalher 81/image1.jpg" },
@@ -83,14 +83,14 @@
     ]
   },
   {
-    "project": "Kalher 48",
+    "project": " 48",
     "description": "A housing project balancing style and utility.",
     "images": [
-      { "url": "/images/kalher 48/image1.jpg" },
-      { "url": "/images/kalher 48/image2.jpg" },
-      { "url": "/images/kalher 48/image3.jpg" },
-      { "url": "/images/kalher 48/image4.jpg" },
-      { "url": "/images/kalher 48/image5.jpg" }
+      { "url": "/images/48/image1.jpg" },
+      { "url": "/images/48/image2.jpg" },
+      { "url": "/images/48/image3.jpg" },
+      { "url": "/images/48/image4.jpg" },
+      { "url": "/images/48/image5.jpg" }
   
     
     ]

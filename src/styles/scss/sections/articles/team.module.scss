@@ -1,257 +1,274 @@
-/* General Section Styling */
+/* General Styles for Sections */
 .section {
-  background: var(--background);
-  padding: 5rem 2rem;
-  position: relative;
-  overflow: hidden; /* Prevents content from overflowing */
+  padding: 40px 0;
 }
 
-/* Styling for Social Media Buttons */
-.textWrapper {
-  .socialLinks {
-    margin-top: 1.5rem;
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap; /* Ensures buttons wrap properly on smaller screens */
-    justify-content: center; /* Centers buttons */
-  }
-  a {
-    display: inline-block;
-    padding: 0.5rem 1.5rem;
-    background-color: #4285f4;
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 600;
-    text-align: center;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    cursor: pointer;
-  }
+.borderBottom {
+  border-bottom: 2px solid #ddd;
 }
 
-/* Container for Flex Layout */
-.container {
+/* Owner Section Styles */
+.ownerSection {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%; /* Ensures full width */
-}
-
-/* Director (Owner) Section */
-.ownerSection {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 5rem;
-  position: relative;
-  z-index: 1;
+  margin-bottom: 40px;
 
   .owner {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    background: linear-gradient(135deg, rgba(131, 190, 231, 0.8), rgba(1, 12, 44, 0.8));
-    border-radius: 1.5rem;
-    padding: 3rem;
-    width: 100%; /* Ensure it takes up full width */
-    max-width: 1200px;
-    margin: 0 auto;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box; /* Ensures padding doesn’t cause overflow */
-    
-    &:hover {
-      transform: scale(1.05);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-    }
-
-    /* Image Section */
-    .imageWrapper {
-      flex: 0 0 40%;
-      margin-right: 3rem;
-      border-radius: 1.5rem;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%; /* Ensure image fits properly */
-      max-width: 300px;
-
-      .ownerImage {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        transition: transform 0.4s ease, box-shadow 0.4s ease;
-      }
-
-      &:hover .ownerImage {
-        transform: scale(1.1);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      }
-    }
-
-    /* Text Section */
-    .textWrapper {
-      flex: 1;
-      text-align: left;
-      color: #fff;
-
-      .teamName {
-        font-family: 'Roboto Slab', serif;  /* Architectural style font */
-        font-weight: 700; /* Strong, bold presence */
-        font-size: 2.5rem;  /* Adjusted size */
-        letter-spacing: 1px; /* Increased spacing for architectural feel */
-        text-transform: uppercase;  /* Capital letters for strength */
-        color: #fff;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle depth */
-      }
-
-      .teamPosition {
-        font-family: 'Roboto Slab', serif; /* Consistent font */
-        font-weight: 600;
-        font-size: 1.6rem;
-        letter-spacing: 0.5px;  /* Subtle spacing for design */
-        color: #f0f0f0;
-        margin-bottom: 1rem;
-      }
-
-      .teamDescription {
-        font-size: 1.3rem;
-        color: #dcdcdc;
-        line-height: 1.8;
-      }
-
-      /* Action Button Section */
-      .actionButton {
-        margin-top: 2rem;
-        display: inline-block;
-        padding: 1rem 2rem;
-        background-color: #4285f4;
-        color: #fff;
-        font-size: 1.2rem;
-        font-weight: 600;
-        text-align: center;
-        border-radius: 0.75rem;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-        text-decoration: none;
-        cursor: pointer;
-        width: auto; /* Prevents button overflow */
-        max-width: 100%; /* Ensures it does not overflow the container */
-        box-sizing: border-box;
-      }
-    }
-  }
-}
-
-/* Team Section */
-.teamGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
-  justify-items: center;
-  width: 100%;
-  margin-top: 4rem;
-
-  .teamMember {
-    background: #fff;
-    border-radius: 1rem;
-    padding: 2.5rem;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-    display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    overflow: hidden;
-    width: 100%; /* Ensures responsive behavior */
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
 
-    &:hover {
-      transform: scale(1.05);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    @media (min-width: 768px) {
+      flex-direction: row;
+      text-align: left;
+      justify-content: space-between; /* Ensures space is distributed evenly */
     }
 
     .imageWrapper {
       width: 100%;
-      height: 250px;
-      overflow: hidden;
-      border-radius: 1rem;
-      margin-bottom: 1rem;
-      position: relative;
+      max-width: 300px;
+      margin-bottom: 20px;
 
-      .teamImage {
-        object-fit: cover;
-        transition: transform 0.4s ease;
-        width: 100%;
-        height: 100%;
-      }
-
-      &:hover .teamImage {
-        transform: scale(1.1);
+      @media (min-width: 768px) {
+        margin-right: 40px;
+        margin-bottom: 0;
       }
     }
 
+    .ownerImage {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;  /* Square Image */
+      object-fit: cover;
+    }
+
     .textWrapper {
-      .teamName {
-        font-size: 1.8rem;
-        color: #333;
-        margin-bottom: 1rem;
+      max-width: 500px;
+      padding: 0 20px;
+
+      h3 {
+        font-size: 24px;
+        font-weight: bold;
       }
 
       .teamPosition {
-        font-size: 1.2rem;
+        font-size: 18px;
         color: #666;
-        margin-bottom: 0.75rem;
+        margin-bottom: 20px;
       }
 
       .teamDescription {
-        font-size: 1rem;
-        color: #777;
-        max-width: 90%;
-        margin: 0 auto;
-        line-height: 1.6;
+        list-style-type: none;
+        padding-left: 0;
+        margin-bottom: 20px;
+
+        li {
+          margin-bottom: 10px;
+        }
+      }
+
+      .socialLinks {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+
+        .socialButton {
+          display: inline-block;
+          padding: 10px 20px;
+          background-color: #007BFF;
+          color: white;
+          text-decoration: none;
+          border-radius: 5px;
+          font-size: 14px;
+
+          &:hover {
+            background-color: #0056b3;
+          }
+        }
       }
     }
   }
 }
 
-/* Media Query for Responsive Design */
-@media (max-width: 768px) {
-  .owner {
+/* Team Grid Styles */
+.teamGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  margin-top: 40px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 1rem; /* Smaller gap between items on mobile */
+  }
+
+  .teamMember {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
 
     .imageWrapper {
-      flex: 0 0 auto;
-      width: 250px;
-      height: 250px;
-      margin-bottom: 1.5rem;
+      width: 150px;
+      height: 150px;
+      margin-bottom: 20px;
+
+      @media (min-width: 768px) {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    .teamImage {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;  /* Circular Image */
+      object-fit: cover;
     }
 
     .textWrapper {
-      .teamName {
-        font-size: 2rem;
+      h3 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
       }
 
       .teamPosition {
-        font-size: 1.2rem;
+        font-size: 16px;
+        color: #777;
+        margin-bottom: 10px;
       }
 
       .teamDescription {
-        font-size: 1.1rem;
-      }
-
-      .actionButton {
-        font-size: 1rem;
-        padding: 0.75rem 1.5rem;
-        width: 100%; /* Ensure button fits within mobile view */
+        font-size: 14px;
+        color: #555;
       }
     }
   }
+}
 
-  .teamMember .imageWrapper {
-    height: 200px;
+/* Director Section Styles - Unique Look */
+.directorSection {
+  background-color: #f2f2f2;
+  padding: 50px 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+
+  .director {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      text-align: left;
+      justify-content: space-between; /* Distributes space evenly */
+    }
+
+    .imageWrapper {
+      width: 100%;
+      max-width: 350px;
+      margin-bottom: 20px;
+
+      @media (min-width: 768px) {
+        margin-right: 40px;
+        margin-bottom: 0;
+      }
+    }
+
+    .directorImage {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .textWrapper {
+      max-width: 600px;
+      padding: 0 20px;
+      flex-grow: 1; /* Ensure the text container takes up available space */
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Center the text vertically */
+    }
+
+    h3 {
+      font-size: 30px;
+      font-weight: bold;
+      color: #2a2a2a;
+    }
+
+    .directorPosition {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .directorDescription {
+      list-style-type: none;
+      padding-left: 0;
+      margin-bottom: 20px;
+
+      li {
+        margin-bottom: 10px;
+      }
+    }
+
+    .socialLinks {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+
+      .socialButton {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 14px;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .teamGrid {
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 1rem; /* Smaller gap between items on mobile */
+  }
+
+  .teamMember {
+    padding: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .ownerSection {
+    .owner {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  .directorSection {
+    padding: 30px 15px;
   }
 }

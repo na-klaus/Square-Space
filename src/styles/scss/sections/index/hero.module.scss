@@ -14,12 +14,24 @@
   height: 100%;
   background-size: cover;
   background-position: center;
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+
+    background-color: #000; /* Pure black */
+  
+  
+  transition: transform 2s ease-in-out, opacity 2s ease-in-out; /* Smooth transition for zoom and opacity */
   z-index: -1;
+  
+  opacity: 1;
+  transform: scale(1.1); /* Slight zoom-in for initial image */
 
   &.fade {
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    transform: scale(0.5); /* Stronger zoom-out when fading out */
+  }
+
+  &:not(.fade) {
+    opacity: 1;
+    transform: scale(1.15); /* Zoom-in effect */
   }
 }
 
@@ -36,21 +48,35 @@
   transform-style: preserve-3d;
 
   h1 {
-    font-size: 3.5rem;
-    font-family: 'Cormorant Garamond', serif; /* Elegant architectural font */
+    font-family: 'Cormorant Garamond', serif;
     color: #fff;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 1rem;
     text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-    white-space: nowrap;
-    animation: typingTitle 3s steps(30, end);
+
+    font-size: 3.5rem;
+
+    @media (max-width: 1200px) {
+      font-size: 3rem;
+    }
+
+    @media (max-width: 992px) {
+      font-size: 2.5rem;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 1.5rem;
+    }
   }
 
   p {
     font-size: 1.5rem;
-    font-family: 'Architects Daughter', cursive; /* Hand-drawn architectural font */
+    font-family: 'Architects Daughter', cursive;
     color: #ddd;
     margin-bottom: 2rem;
     max-width: 700px;
@@ -82,16 +108,6 @@
       background: #f5f5f5;
       box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
     }
-  }
-}
-
-/* Typing animation for h1 */
-@keyframes typingTitle {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
   }
 }
 
@@ -132,6 +148,23 @@
     .ctaButton {
       padding: 0.8rem 2rem;
       font-size: 0.9rem;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .contentWrapper {
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    .ctaButton {
+      padding: 0.7rem 1.8rem;
+      font-size: 0.8rem;
     }
   }
 }

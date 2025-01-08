@@ -12,7 +12,7 @@
     "description": "Riayz Ansari bridges design and execution, bringing architectural plans to life on-site with precision and leadership, coordinating with contractors and engineers throughout construction."
   },
   {
-    "name": "AR MOHAMMED UMAR ANSARI  ",
+    "name": "AR MOHAMMED UMAR ANSARI",
     "position": "3D visualizer",
     "image": "/img/team4.jpg",
     "description": "A visionary architect, planner, and 3D artist, transforming interiors into functional and inspired works of art."
@@ -24,21 +24,58 @@
     "description": "Siddhart Kadam is skilled in managing regulations and approvals, ensuring smooth project compliance and coordination across all stages."
   },
   {
+    "name": "Navish Ansari",
+    "position": "Operation Engineer",
+    "image": "/img/team5.jpg",
+    "description": "Leading the charge in crafting interactive web solutions that elevate user experience."
+  },
+  {
+    "name": "Roem",
+    "position": "Junior Architect",
+    "image": "/img/user2.jpg",
+    "description": "Eager to learn and contribute, assisting in the development of innovative architectural designs."
+  },
+  {
+    "name": "Hitesh Choudhary",
+    "position": "Web Developer",
+    "image": "/img/team7.jpg",
+    "description": "A proficient web developer, dedicated to delivering modern, fast, and user-friendly websites."
+  },
+  {
+    "name": "Shruti",
+    "position": "Architectural Drafter",
+    "image": "/img/user2.jpg",
+    "description": "Creating architectural drafts and layouts using AutoCAD, while also enhancing presentations with Photoshop."
+  },
+  {
+    "name": "Kaushal Shukla",
+    "position": "Network Engineer",
+    "image": "/img/team8.png",
+    "description": "Managing and optimizing network infrastructure, ensuring seamless connectivity and security."
+  },
+  {
     "name": "Tausif Ansari",
     "position": "Personal Chauffeur",
     "image": "/img/team11.jpg",
     "description": "Providing reliable transportation services, Tausif ensures the owner’s safe and efficient travel to various engagements."
   },
+
   {
-    "name": "Roem",
-    "position": "Junior Architect",
-    "image": "/img/team10.jpg",
-    "description": "Eager to learn and contribute, assisting in the development of innovative architectural designs."
+    "name": "Taha",
+    "position": "AutoCAD Designer",
+    "image": "/img/team13.jpg",
+    "description": "Specializing in detailed design drawings and drafting using AutoCAD for architectural projects."
   },
   {
-    "name": "Navish Ansari",
-    "position": "Operation Engineer",
-    "image": "/img/team5.jpg",
-    "description": "Leading the charge in crafting interactive web solutions that elevate user experience."
+    "name": "Saif",
+    "position": "Architectural Draftsman",
+    "image": "/img/user2.jpg",
+    "description": "Creating detailed architectural plans and layouts with a focus on precision using AutoCAD."
+  },
+  {
+    "name": "Ashraf",
+    "position": "Design Draftsman",
+    "image": "/img/user2.jpg",
+    "description": "Providing support in design drafting and documentation, creating accurate drawings using AutoCAD."
   }
 ]

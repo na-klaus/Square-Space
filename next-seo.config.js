@@ -87,7 +87,7 @@ const SEO = {
       "@type": "Organization",
       name: "Square Space",
       url: "https://www.square-space.in/",
-      logo: "https://www.square-space.in/images/logo.jpg",
+      logo: "https://www.square-space.in/images/logo.ico",
       contactPoint: {
         "@type": "ContactPoint",
         telephone: "+91-9324555058",

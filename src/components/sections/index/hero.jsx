@@ -43,6 +43,7 @@ export default function Hero() {
   const [fade, setFade] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [imageQuality, setImageQuality] = useState('low'); // default to low quality
+  const [textVisible, setTextVisible] = useState(true); // State for text visibility
 
   useEffect(() => {
     // Detect user's connection quality (if supported by browser)
@@ -70,6 +71,11 @@ export default function Hero() {
         setFade(false); // Trigger fade-in after the image changes
       }, 500); // Match CSS animation duration
     }, 5000);
+
+    // Hide text after 4 seconds
+    setTimeout(() => {
+      setTextVisible(false); // Hide both the title and subtitle after 4 seconds
+    }, 6000);
 
     return () => clearInterval(intervalId); // Cleanup interval on component unmount
   }, [imageQuality]);
@@ -110,10 +116,14 @@ export default function Hero() {
           transform: `rotateX(${mousePosition.y / 2}deg) rotateY(${mousePosition.x / 2}deg)`,
         }}
       >
-        <h1 className={hero.title}>Innovate Your Space</h1>
-        <p className={hero.subtitle}>
-          Transforming ideas into reality with architectural brilliance.
-        </p>
+        {textVisible && (
+          <>
+            <h1 className={hero.title}>Innovate Your Space</h1>
+            <p className={hero.subtitle}>
+              Transforming ideas into reality with architectural brilliance.
+            </p>
+          </>
+        )}
       </div>
     </Section>
   );

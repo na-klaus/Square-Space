@@ -6,23 +6,18 @@
     "description": "Elaf Ansari combines creativity with precision in architecture, excelling in managing construction documents, approvals, permits, and compliance to ensure smooth project execution."
   },
   {
-    "name": "Riayz Ansari",
+    "name": "Riyaz Ansari",
     "position": "Principle Architect",
     "image": "/img/team1.jpg",
-    "description": "Riayz Ansari bridges design and execution, bringing architectural plans to life on-site with precision and leadership, coordinating with contractors and engineers throughout construction."
+    "description": "Riyaz Ansari bridges design and execution, bringing architectural plans to life on-site with precision and leadership, coordinating with contractors and engineers throughout construction."
   },
   {
     "name": "AR MOHAMMED UMAR ANSARI",
-    "position": "3D visualizer",
+    "position": "visualizer",
     "image": "/img/team4.jpg",
     "description": "A visionary architect, planner, and 3D artist, transforming interiors into functional and inspired works of art."
   },
-  {
-    "name": "Siddhart Kadam",
-    "position": "Liaisoning Head",
-    "image": "/img/team9.jpg",
-    "description": "Siddhart Kadam is skilled in managing regulations and approvals, ensuring smooth project compliance and coordination across all stages."
-  },
+  
   {
     "name": "Navish Ansari",
     "position": "Operation Engineer",
@@ -32,8 +27,14 @@
   {
     "name": "Roem",
     "position": "Junior Architect",
-    "image": "/img/user2.jpg",
+    "image": "/img/team22.jpg",
     "description": "Eager to learn and contribute, assisting in the development of innovative architectural designs."
+  },
+  {
+    "name": "Siddhart Kadam",
+    "position": "Liaisoning Head",
+    "image": "/img/team9.jpg",
+    "description": "Siddhart Kadam is skilled in managing regulations and approvals, ensuring smooth project compliance and coordination across all stages."
   },
   {
     "name": "Hitesh Choudhary",
@@ -44,7 +45,7 @@
   {
     "name": "Shruti",
     "position": "Architectural Drafter",
-    "image": "/img/user2.jpg",
+    "image": "/img/team20.jpg",
     "description": "Creating architectural drafts and layouts using AutoCAD, while also enhancing presentations with Photoshop."
   },
   {
@@ -59,7 +60,12 @@
     "image": "/img/team11.jpg",
     "description": "Providing reliable transportation services, Tausif ensures the owner’s safe and efficient travel to various engagements."
   },
-
+  {
+    "name": "Saquib",
+    "position": "Site Engineer",
+    "image": "/img/team25.jpg",
+    "description": "our skilled Site Engineer, excels in managing on-site operations with precision and dedication, ensuring every project meets the highest standards"
+  },
   {
     "name": "Taha",
     "position": "AutoCAD Designer",
@@ -69,13 +75,13 @@
   {
     "name": "Saif",
     "position": "Architectural Draftsman",
-    "image": "/img/user2.jpg",
+    "image": "/img/team23.jpg",
     "description": "Creating detailed architectural plans and layouts with a focus on precision using AutoCAD."
   },
   {
     "name": "Ashraf",
     "position": "Design Draftsman",
-    "image": "/img/user2.jpg",
+    "image": "/img/team24.jpg",
     "description": "Providing support in design drafting and documentation, creating accurate drawings using AutoCAD."
   }
 ]

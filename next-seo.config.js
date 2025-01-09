@@ -1,42 +1,38 @@
 const SEO = {
-  title: "Square Space | Architecture & Engineering Consulting",
+  title: "Square Space | Top Architects & Engineering Consultants in Bhiwandi",
   description:
-    "Square Space is an architecture and engineering consulting firm offering structured planning, interior design, NOC permissions, and legal consulting. Our expert services ensure quality, compliance, and innovative solutions.",
+    "Looking for architects in Bhiwandi? Square Space offers the best architecture and engineering consulting services in Bhiwandi, including structured planning, interior design, NOC permissions, and legal consulting.",
   canonical: "https://www.square-space.in/",
 
   openGraph: {
     url: "https://www.square-space.in/",
-    title: "Square Space | Architecture & Engineering Consulting",
+    title: "Square Space | Top Architects & Engineering Consultants in Bhiwandi",
     description:
-      "Square Space offers innovative architectural and engineering consulting services, including structured planning, interior design, NOC permissions, and legal consulting.",
+      "Square Space specializes in architectural and engineering services in Bhiwandi, offering tailored solutions for structured planning, interior design, and legal compliance.",
     images: [
       {
-        url: "https://www.square-space.in/images/hero-image.jpg",
+        url: "https://www.square-space.in/images/logo.jpg", // Your logo path
         width: 1200,
         height: 630,
-        alt: "Square Space Architecture",
+        alt: "Square Space - Top Architects in Bhiwandi",
         type: "image/jpeg",
       },
     ],
     site_name: "Square Space",
-    profile: {
-      username: "square_space_architect", // Updated Instagram handle
-    },
     locale: "en_US",
   },
 
   twitter: {
-    handle: "@square_space_ar", // Updated Twitter handle
-    site: "@square_space_ar", // Updated Twitter site handle
+    handle: "@square_space_ar",
+    site: "@square_space_ar",
     cardType: "summary_large_image",
   },
 
-  // Additional Meta Tags for SEO
   additionalMetaTags: [
     {
       property: "keywords",
       content:
-        "architecture, engineering, consulting, interior design, NOC permissions, structured planning, legal consulting, innovative solutions, construction, sustainable design, urban planning",
+        "Square Space Architect, Square Space in Bhiwandi, architects in Bhiwandi, engineering consultants Bhiwandi, interior design Bhiwandi, NOC permissions Bhiwandi, best architecture firm Bhiwandi, Square Space services, architecture planning Bhiwandi, Bhiwandi architects and engineers",
     },
     {
       property: "robots",
@@ -48,7 +44,7 @@ const SEO = {
     },
     {
       property: "og:image:alt",
-      content: "Square Space Architecture Hero Image",
+      content: "Square Space - Top Architects in Bhiwandi",
     },
     {
       property: "og:type",
@@ -56,44 +52,42 @@ const SEO = {
     },
     {
       name: "twitter:image",
-      content: "https://www.square-space.in/images/hero-image.jpg",
+      content: "https://www.square-space.in/images/logo.jpg",
     },
     {
       name: "twitter:description",
       content:
-        "Square Space offers innovative architectural and engineering consulting services, including structured planning, interior design, NOC permissions, and legal consulting.",
+        "Square Space provides top-notch architecture and engineering consulting services in Bhiwandi, specializing in structured planning and interior design.",
     },
     {
       name: "twitter:title",
-      content: "Square Space | Architecture & Engineering Consulting",
+      content: "Square Space | Top Architects & Engineering Consultants in Bhiwandi",
     },
     {
       name: "viewport",
       content: "width=device-width, initial-scale=1.0",
     },
     {
-      name: "robots",
-      content: "index, follow",
+      name: "geo.region",
+      content: "IN-MH",
     },
     {
-      name: "language",
-      content: "en-US",
+      name: "geo.placename",
+      content: "Bhiwandi",
+    },
+    {
+      name: "geo.position",
+      content: "19.2822956;73.0743314",
     },
   ],
 
-  // Additional Custom Metadata Tags
-  facebook: {
-    appId: "", // Optional: Include your Facebook App ID (if applicable)
-  },
-
-  // Structured Data (JSON-LD for SEO)
   structuredData: [
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       name: "Square Space",
       url: "https://www.square-space.in/",
-      logo: "https://www.square-space.in/logo.jpg",
+      logo: "https://www.square-space.in/images/logo.jpg",
       contactPoint: {
         "@type": "ContactPoint",
         telephone: "+91-9324555058",
@@ -102,8 +96,8 @@ const SEO = {
         availableLanguage: "English",
       },
       sameAs: [
-        "https://www.instagram.com/square_space_architect/", // Updated Instagram URL
-        "https://x.com/square_space_ar", // Updated Twitter URL
+        "https://www.instagram.com/square_space_architect/",
+        "https://x.com/square_space_ar",
         "https://www.linkedin.com/company/square-space-1/?viewAsMember=true",
       ],
     },
@@ -118,9 +112,36 @@ const SEO = {
         query: "search_term_string",
       },
     },
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      name: "Square Space",
+      image: "https://www.square-space.in/images/logo.jpg",
+      "@id": "https://www.square-space.in/",
+      url: "https://www.square-space.in/",
+      telephone: "+91-9324555058",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "2nd Floor, LM Tower, 206/207, Bhiwandi - Murbad Rd, Vishal Wadi, Bhadwad Naka, Sonale Village",
+        addressLocality: "Bhiwandi",
+        addressRegion: "Maharashtra",
+        postalCode: "421302",
+        addressCountry: "IN",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 19.2822956,
+        longitude: 73.0743314,
+      },
+      openingHours: "Mo-Fr 09:00-18:00",
+      sameAs: [
+        "https://www.instagram.com/square_space_architect/",
+        "https://x.com/square_space_ar",
+        "https://www.linkedin.com/company/square-space-1",
+      ],
+    },
   ],
 
-  // Sitemap Configuration (optional)
   sitemap: {
     hostname: "https://www.square-space.in",
     generateRobotsTxt: true,

@@ -23,9 +23,20 @@ export default function Home() {
 					subTitle="At Square Space, our vision is to redefine architectural design by merging creativity with functionality. With a focus on innovative solutions and sustainable practices, we aim to create spaces that enhance the way people live, work, and interact. Our journey is driven by a commitment to excellence and a passion for crafting environments that inspire and stand the test of time."
 				/>
 				<section className={about.content}>
-					<div className={about.image}>
-						<Image src="/arshad.jpg" width={600} height={800} alt="Square Space" loading="eager" />
-					</div>
+	<div className={about.media}>
+		<video 
+			width="300" 
+			height="300" 
+			controls 
+			loop 
+			
+		
+			playsInline
+		>
+			<source src="/n.mp4" type="video/mp4" />
+			Your browser does not support the video tag.
+		</video>
+	</div>
 					<div className={about.copy}>
 						<CopyBlock
 							title="Design Philosophy"

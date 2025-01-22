@@ -22,9 +22,11 @@ export default function Hero() {
   ];
 
   const highQualityBackgrounds = [
+    
+    
+    '/images/photo3.jpg',
     '/images/photo1.jpg', // High quality image
     '/images/photo2.jpg',
-    '/images/photo3.jpg',
     '/images/photo4.jpg',
     '/images/photo5.jpg',
     '/images/photo6.jpg',

@@ -1,0 +1,73 @@
+/* =============================================================
+   animations.css — keyframes, reveal primitives, reduced-motion
+   ============================================================= */
+
+/* Initial states applied before GSAP takes over (no-flash) */
+.js [data-split] { opacity: 1; }
+.js [data-reveal="up"] { opacity: 0; transform: translateY(40px); }
+.js [data-reveal="fade"] { opacity: 0; }
+.js [data-reveal="clip"] { clip-path: inset(0 0 100% 0); }
+.js [data-reveal="scale"] { transform: scale(1.08); }
+
+/* When GSAP isn't available or animations complete, ensure visible */
+.is-inview[data-reveal] { opacity: 1 !important; transform: none !important; clip-path: inset(0 0 0 0) !important; }
+
+/* The mask line used by SplitType lines */
+.line-inner { display: inline-block; will-change: transform; }
+
+/* Hero title rows hidden only when JS will animate them (prevents flash) */
+.js .hero__title .row span { transform: translateY(110%); will-change: transform; }
+.js.is-loaded .hero__title .row span { /* GSAP takes over post-load */ }
+
+/* Soft entrance for hero grad */
+@keyframes floatGrad { 0%,100% { transform: translate3d(0,0,0); } 50% { transform: translate3d(0,-2%,0); } }
+
+/* shimmer for loader bar */
+@keyframes shimmer { 0% { opacity: .4; } 50% { opacity: 1; } 100% { opacity: .4; } }
+
+/* magnetic ease handled in JS; here is a fallback hover lift */
+@media (hover: hover) {
+  .lift { transition: transform .6s var(--ease); }
+  .lift:hover { transform: translateY(-6px); }
+}
+
+/* Rotating seal / badge */
+.seal { animation: spin 18s linear infinite; transform-origin: center; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Draw-in for SVG architectural lines */
+.draw path, .draw line, .draw rect, .draw circle, .draw polyline {
+  stroke-dasharray: 1; stroke-dashoffset: 1;
+  /* set via JS pathLength=1 */
+}
+
+/* number flip */
+.count { font-variant-numeric: tabular-nums; }
+
+/* page transition curtain */
+.curtain { position: fixed; inset: 0; z-index: 9000; background: var(--ink); transform: scaleY(0); transform-origin: bottom; pointer-events: none; will-change: transform; }
+.curtain.is-active { pointer-events: auto; }
+
+/* scroll progress hairline (top) */
+.scroll-progress { position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 9500; pointer-events: none; background: transparent; }
+.scroll-progress span { display: block; height: 100%; width: 100%; transform-origin: left; transform: scaleX(0); background: linear-gradient(90deg, var(--bronze), var(--clay)); will-change: transform; }
+@media (prefers-reduced-motion: reduce) { .scroll-progress { display: none !important; } }
+
+/* ============================================================
+   REDUCED MOTION — honor user preference, keep content visible
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .js [data-reveal] { opacity: 1 !important; transform: none !important; clip-path: none !important; }
+  .js [data-split] { opacity: 1 !important; }
+  .js .hero__title .row span { transform: none !important; }
+  .hero__scroll .bar::after { animation: none; }
+  .marquee__track { transform: none !important; }
+  .seal { animation: none; }
+  .cursor, .cursor-follow { display: none; }
+}
